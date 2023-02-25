@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="My dev 2.css">
+    <title>Dev 2</title>
+</head>
+
+<body>
+    <header>
+        <h1>My Blog</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li class="li"><a href="#" class="common">Link 1</a></li>
+            <li class="li"><a href="#" class="common">Link 2</a></li>
+            <li class="li"><a href="#" class="common">Link 3</a></li>
+            <li class="li"><a href="#" class="common">Link 4</a></li>
+            <li class="li"><a href="#" class="common">Link 5</a></li>
+        </ul>
+    </nav>
+    <aside>
+        <h4>
+            <p>
+                The number 42 is&comma; in The Hitchhiker&apos;s Guide to the Galaxy by Douglas Adams&comma; the &ldquo;Answer to the Ultimate Question of Life&comma; the Universe&comma; and Everything&comma;&rdquo; calculated by an enormous supercomputer named Deep
+                Thought over a period of 7&period;5 million years&period;
+            </p>
+            <p class="intro"><b>Css</b>is awesome&period;</p>
+        </h4>
+    </aside>
+    <main>
+        <article>
+            <h1 align="center">About Me</h1>
+            <p align="center">My name is <b>Chukwuemeka</b>&period; I am a Web Developer&period;
+                <br/> I am 17 years old and I live in Lagos&period;</p>
+            <p align="center" style="color:blue;font-size:42px;">Contact me on
+                <a href="https://www.linkedin.com/">LinkedIn</a></p>
+        </article>
+
+        <section>
+            <audio src="audio.mp3" controls autoplay loop>
+                Audio not supported&period;
+            </audio><br>
+            <audio controls>
+                <source src="audio.mp3" type="audio/mpeg">
+                <source src="audio.ogg" type="audio/ogg">
+            </audio><br>
+            <video controls autoplay loop>
+                <source src="video.mp4" type="video/mp4">
+                <source src="video.ogg" type="video/ogg">
+                Video not supported by your browser
+            </video><br>
+            <p>Some videos that I really like</p>
+            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/8mq2gFxhuGs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/JmvHNatZgVI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+        </section>
+
+        <a href="https://www.google.com">
+            <img src="tree.jpg">
+        </a>
+
+        <ul>
+            <li>Apples</li>
+            <li>Milk</li>
+            <li>Eggs</li>
+        </ul>
+
+        <ul>
+            <li><a href="https://www.facebook.com">Facebook</a></li>
+            <li><a href="https://www.google.com">Google</a></li>
+            <li><a href="https://www.linkedin.com">LinkedIn</a></li>
+        </ul>
+
+        <ol>
+            <li>Bob</li>
+            <li>Amy</li>
+            <li>Dave</li>
+        </ol>
+
+        <ol>
+            <li>Milk</li>
+            <li>Apples
+                <ul>
+                    <li>Red</li>
+                    <li>Green</li>
+                </ul>
+            </li>
+            <li>Bananas</li>
+        </ol>
+
+        <ul>
+            <li>Turn left</li>
+            <li>Turn right</li>
+            <li>Make a U-turn</li>
+            <li>You have arrived&excl;</li>
+        </ul>
+
+
+        <table class="one">
+            <tr>
+                <th colspan="3">Users</th>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Country</th>
+            </tr>
+            <tr>
+                <td>Amy</td>
+                <td>42</td>
+                <td>USA</td>
+            </tr>
+            <tr>
+                <td>Bob</td>
+                <td>19</td>
+                <td>UK</td>
+            </tr>
+        </table>
+
+        <div>
+            <h4>some title</h4>
+            <p>some text</p>
+            <a href="#name">some link</a>
+        </div>
+
+
+        <table class="two">
+            <tr>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+            </tr>
+            <tr class="free">
+                <td>Soccer</td>
+                <td rowspan="2">Free Time</td>
+                <td>Math class</td>
+            </tr>
+            <tr>
+                <td>Biology</td>
+                <td>Travel</td>
+            </tr>
+        </table>
+    </main>
+    <footer>
+        <form>
+            <button>Send</button><br>
+            <select>
+                <option>Red</option>
+                <optiion>Blue</optiion>
+                <option>Orange</option>
+                <option>Green</option>
+                <option>Black</option>
+                <option>Yellow</option>
+                <option>White
+                </option>
+            </select><br/>
+            <label for="name">Name we want &colon;</label>
+            <input type="text" id="name" placeholder="Enter your name"><br/>
+            <!--only a single line fot the text input type-->
+            <label for="message">Multi&dash;line text &colon;</label>
+            <textarea id="message" placeholder="Type as much as you want"></textarea><br/>
+            <!--Multi-line text for the textarea-->
+            <label for="emails">My email &colon;</label>
+            <input type="email" id="emails" placeholder="name@domain.com" required><br/>
+            <input type="url"><br/>
+            <input type="tel"><br/>
+            <input type="button" value="Done"><br/>
+            <input type="checkbox" id="tech">
+            <label for="tech">Tech</label><br/>
+            <input type="checkbox" id="sports">
+            <label for="sports">Sports</label><br/>
+            <input type="checkbox" id="books">
+            <label for="books">Books</label><br/>
+            <input type="color"><br/>
+            <input type="date"><br/>
+            <input type="range"><br/>
+            <input type="search"><br/>
+            <input type="file"><br/>
+            <input type="image"><br/>
+            <input type="reset" value="reset"><br/>
+            <input type="radio" name="title" id="mr">
+            <label for="mr">Mr</label><br/>
+            <input type="radio" name="title" id="ms">
+            <label for="ms">Ms</label><br/>
+            <input type="radio" name="title" id="mrs">
+            <label for="mrs">Mrs</label><br/>
+            <input type="datetime"><br/>
+            <input type="datetime-local"><br/>
+            <input type="password"><br/>
+            <input type="time"><br/>
+            <input type="number"><br/>
+            <input type="month"><br/>
+            <input type="week"><br/>
+            <input type="hidden"><br/>
+            <input type="submit">
+        </form>
+        <p align="center" class="intro">&copy;Copyright</p>
+        <form>
+            <h2>Contact&nbsp;Us</h2>
+            <label for="type">Type&colon;</label>
+            <select id="type">
+                <option>General</option>
+                <option>Payment Issue</option>
+                <option>Other</option>
+            </select><br><br>
+            <label for="names">Name&colon;</label>
+            <input id="names" type="text"><br><br>
+            <label for="messages">Message&colon;</label><br><br>
+            <textarea id="messages"></textarea><br><br>
+            <input type="button" value="send">
+        </form>
+    </footer>
+    <script src="My dev 2.js"></script>
+</body>
+
+</html>

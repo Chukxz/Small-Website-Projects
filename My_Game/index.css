@@ -1,0 +1,15 @@
+#gameScreen {
+    border: 1px solid black;
+    outline: 1px solid red;
+    outline-offset: 2px;
+}
+
+canvas {
+    background-color: blue;
+}
+
+#myimg {
+    width: 10px;
+    height: 10px;
+    display: none;
+}

@@ -1,0 +1,144 @@
+body {
+    display: block;
+    margin: 0;
+    background-color: #edd49d;
+}
+
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.dropdownContent {
+    display: none;
+    border: 3px solid salmon;
+    width: fit-content;
+    height: fit-content;
+    color: gray;
+    position: absolute;
+    background-color: aqua;
+    display: none;
+    z-index: 10;
+    padding: 5px;
+}
+
+.dropdown:hover .dropdownContent {
+    display: block;
+}
+
+span.x {
+    color: black;
+}
+
+#section {
+    width: 90vw;
+    height: fit-content;
+    text-align: center;
+}
+
+h1 {
+    height: 20px;
+}
+
+#form1 {
+    margin: 0 2px;
+}
+
+#mytextarea {
+    height: fit-content;
+    width: 30vw;
+    max-width: 40vw;
+    max-height: 10vh;
+}
+
+#donediv {
+    width: fit-content;
+    height: fit-content;
+}
+
+#done {
+    width: fit-content;
+    height: fit-content;
+    margin-right: 20px;
+    border: 3px solid salmon;
+    background-color: darkgray;
+}
+
+.uldiv {
+    display: block;
+    position: relative;
+    width: 80vw;
+    height: auto;
+    background: white;
+    margin: 5px 5px 5px 5px;
+}
+
+#ul {
+    margin: 70px 2px 2px 2px;
+    width: 75vw;
+    overflow-x: hidden;
+    height: fit-content;
+    list-style: disc outside none;
+    padding: 2px 5px;
+    background-color: saddlebrown;
+    display: none;
+    border: solid salmon 2px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    float: left;
+    position: absolute;
+    border-right: none;
+}
+
+#ul>* {
+    height: 1em;
+}
+
+#removebtn {
+    display: none;
+    float: right;
+    position: absolute;
+    height: fit-content;
+    height: fit-content;
+    text-align: center;
+    list-style: none inside none;
+    margin: 70px 0 0 0;
+    width: 5vw;
+    right: 0;
+    padding: 2px 5px;
+    background-color: saddlebrown;
+    border: solid salmon 2px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-left: none;
+    cursor: pointer;
+}
+
+#removebtn>* {
+    padding-top: 2px;
+    height: 1em;
+}
+
+@media screen and (max-width:500px) {
+    #donediv {
+        position: relative;
+        top: 2px;
+        left: 70vw;
+    }
+    #done {
+        padding: 1px 20px;
+        transform: translateY(1vh);
+    }
+}
+
+@media screen and (min-width:500px) {
+    #done {
+        padding: 4px 60px;
+        transform: translateY(10vh);
+    }
+    #donediv {
+        position: absolute;
+        top: 20px;
+        right: 2px;
+    }
+}

@@ -1,0 +1,514 @@
+html {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: black;
+    color: wheat;
+}
+
+
+/*Hides the Segment and Triangle options in the (Select Property). Will be lifted when the JS code has been fully rectified*/
+
+#seg,
+#Seg,
+#tri,
+#Tri {
+    display: none;
+}
+
+#num1,
+#num2 {
+    cursor: text;
+    color: firebrick;
+}
+
+#dropdown1 {
+    position: relative;
+    display: inline-block;
+    width: inherit;
+    height: inherit;
+    cursor: pointer;
+}
+
+#dropdown1-content {
+    position: absolute;
+    display: none;
+    z-index: 1;
+    width: fit-content;
+    height: fit-content;
+    background-color: brown;
+    padding: 4px;
+}
+
+#dropdown1-content>*:hover {
+    text-decoration-style: solid;
+    text-decoration-line: underline;
+    text-decoration-color: black;
+    text-underline-offset: 4px;
+}
+
+#dropdown1:hover #dropdown1-content {
+    display: block;
+    left: 50%;
+    top: 100%;
+}
+
+#prop1 {
+    font-style: italic;
+    color: cadetblue;
+}
+
+#dropdown2 {
+    position: relative;
+    display: inline-block;
+    width: inherit;
+    height: inherit;
+    cursor: pointer;
+}
+
+#dropdown2-content {
+    position: absolute;
+    display: none;
+    z-index: 1;
+    width: fit-content;
+    height: fit-content;
+    background-color: tomato;
+    padding: 4px;
+}
+
+#dropdown2:hover #dropdown2-content {
+    display: block;
+    left: 50%;
+    top: 100%;
+}
+
+#dropdown2-content>*:hover {
+    text-decoration-style: solid;
+    text-decoration-line: underline;
+    text-decoration-color: black;
+    text-underline-offset: 4px;
+}
+
+#param1 {
+    font-style: italic;
+    color: cornflowerblue;
+}
+
+#dropdown3 {
+    position: relative;
+    display: inline-block;
+    width: inherit;
+    height: inherit;
+    cursor: pointer;
+}
+
+#dropdown3-content {
+    position: absolute;
+    display: none;
+    z-index: 1;
+    width: fit-content;
+    height: fit-content;
+    background-color: teal;
+    padding: 4px;
+}
+
+#dropdown3-content>*:hover {
+    text-decoration-style: solid;
+    text-decoration-line: underline;
+    text-decoration-color: black;
+    text-underline-offset: 4px;
+}
+
+#dropdown3:hover #dropdown3-content {
+    display: block;
+    left: 50%;
+    top: 100%;
+}
+
+#unit1 {
+    font-style: italic;
+    color: darkkhaki;
+}
+
+#dropdown4 {
+    position: relative;
+    display: inline-block;
+    width: inherit;
+    height: inherit;
+    cursor: pointer;
+}
+
+#dropdown4-content {
+    position: absolute;
+    display: none;
+    z-index: 1;
+    width: fit-content;
+    height: fit-content;
+    background-color: coral;
+    padding: 4px;
+}
+
+#dropdown4-content>*:hover {
+    text-decoration-style: solid;
+    text-decoration-line: underline;
+    text-decoration-color: black;
+    text-underline-offset: 4px;
+}
+
+#dropdown4:hover #dropdown4-content {
+    display: block;
+    left: 50%;
+    top: 100%;
+}
+
+#rate1 {
+    font-style: italic;
+    color: thistle;
+}
+
+#dropdown5 {
+    position: relative;
+    display: inline-block;
+    width: inherit;
+    height: inherit;
+    cursor: pointer;
+}
+
+#dropdown5-content {
+    position: absolute;
+    display: none;
+    z-index: 1;
+    width: fit-content;
+    height: fit-content;
+    background-color: darkorange;
+    padding: 4px;
+}
+
+#dropdown5-content>*:hover {
+    text-decoration-style: solid;
+    text-decoration-line: underline;
+    text-decoration-color: black;
+    text-underline-offset: 4px;
+}
+
+#dropdown5:hover #dropdown5-content {
+    display: block;
+    left: 50%;
+    top: 100%;
+}
+
+#prop2 {
+    font-style: italic;
+    color: cadetblue;
+}
+
+#change {
+    color: dimgray;
+}
+
+#dropdown6 {
+    position: relative;
+    display: inline-block;
+    width: inherit;
+    height: inherit;
+    cursor: pointer;
+}
+
+#dropdown6-content {
+    position: absolute;
+    display: none;
+    z-index: 1;
+    width: fit-content;
+    height: fit-content;
+    background-color: darkgoldenrod;
+    padding: 4px;
+}
+
+#dropdown6-content>*:hover {
+    text-decoration-style: solid;
+    text-decoration-line: underline;
+    text-decoration-color: black;
+    text-underline-offset: 4px;
+}
+
+#dropdown6:hover #dropdown6-content {
+    display: block;
+    left: 50%;
+    top: 100%;
+}
+
+#unit2 {
+    font-style: italic;
+    color: darkkhaki;
+}
+
+#divdone {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: fit-content;
+    width: auto;
+    text-align: center;
+}
+
+#divdone #divdo {
+    display: inline-block;
+    text-align: center;
+    background-color: darkorchid;
+    padding: 20px;
+    height: fit-content;
+    width: 200px;
+    margin: 3px;
+    font-size: 20px;
+    opacity: 0.4;
+    border: 5px solid palevioletred;
+    border-bottom-right-radius: 20%;
+    border-top-left-radius: 20%;
+    background-clip: padding-box;
+    transition: all 0.5s;
+    box-shadow: 2px 9px #999999;
+    cursor: pointer;
+}
+
+#divdone #divdo:hover {
+    opacity: 1;
+    border-color: darkviolet;
+    box-shadow: 2px 4px #666666;
+    transform: translateY(2px);
+}
+
+#divdone #divdo:active {
+    cursor: wait;
+}
+
+#divdone #divdo .spanone {
+    display: inline-block;
+    position: relative;
+    transition: all 0.5s;
+}
+
+#divdone #divdo .spanone::after {
+    content: "\00bb";
+    position: absolute;
+    top: 0;
+    right: -20px;
+    opacity: 0;
+}
+
+#divdone #divdo:hover .spanone {
+    padding-right: 30px;
+}
+
+#divdone #divdo:hover .spanone::after {
+    right: 0;
+    opacity: 1;
+}
+
+section#ans {
+    color: seagreen;
+    visibility: hidden;
+}
+
+.div2 {
+    text-align: left;
+    width: fit-content;
+    height: fit-content;
+}
+
+#firstp {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+}
+
+.N1 {
+    animation: N1span 6s linear 0.5s infinite normal forwards;
+}
+
+@keyframes N1span {
+    0% {
+        color: red;
+    }
+    50% {
+        color: green;
+    }
+    100% {
+        color: blue;
+    }
+}
+
+.i {
+    animation: ispan 6s linear 1s infinite normal forwards;
+}
+
+@keyframes ispan {
+    0% {
+        color: red;
+    }
+    50% {
+        color: green;
+    }
+    100% {
+        color: blue;
+    }
+}
+
+.c {
+    animation: cspan 6s linear 1.5s infinite normal forwards;
+}
+
+@keyframes cspan {
+    0% {
+        color: red;
+    }
+    50% {
+        color: green;
+    }
+    100% {
+        color: blue;
+    }
+}
+
+.e {
+    animation: espan 6s linear 2s infinite normal forwards;
+}
+
+@keyframes espan {
+    0% {
+        color: red;
+    }
+    50% {
+        color: green;
+    }
+    100% {
+        color: blue;
+    }
+}
+
+.I1 {
+    animation: I1span 6s linear 2.5s infinite normal forwards;
+}
+
+@keyframes I1span {
+    0% {
+        color: red;
+    }
+    50% {
+        color: green;
+    }
+    100% {
+        color: blue;
+    }
+}
+
+.s {
+    animation: sspan 6s linear 3s infinite normal forwards;
+}
+
+@keyframes sspan {
+    0% {
+        color: red;
+    }
+    50% {
+        color: green;
+    }
+    100% {
+        color: blue;
+    }
+}
+
+.n2 {
+    animation: n2span 3s linear 3.5s infinite normal forwards;
+}
+
+@keyframes n2span {
+    0% {
+        color: red;
+    }
+    50% {
+        color: green;
+    }
+    100% {
+        color: blue;
+    }
+}
+
+.apos {
+    animation: aposspan 6s linear 4s infinite normal forwards;
+}
+
+@keyframes aposspan {
+    0% {
+        color: red;
+    }
+    50% {
+        color: green;
+    }
+    100% {
+        color: blue;
+    }
+}
+
+.t {
+    animation: tspan 6s linear 4.5s infinite normal forwards;
+}
+
+@keyframes tspan {
+    0% {
+        color: red;
+    }
+    50% {
+        color: green;
+    }
+    100% {
+        color: blue;
+    }
+}
+
+.Ii {
+    animation: Iispan 6s linear 5s infinite normal forwards;
+}
+
+@keyframes Iispan {
+    0% {
+        color: red;
+    }
+    50% {
+        color: green;
+    }
+    100% {
+        color: blue;
+    }
+}
+
+.T1 {
+    animation: T1span 6s linear 5.5s infinite normal forwards;
+}
+
+@keyframes T1span {
+    0% {
+        color: red;
+    }
+    50% {
+        color: green;
+    }
+    100% {
+        color: blue;
+    }
+}
+
+.quest {
+    animation: questspan 6s linear 6s infinite normal forwards;
+}
+
+@keyframes questspan {
+    0% {
+        color: red;
+    }
+    50% {
+        color: green;
+    }
+    100% {
+        color: blue;
+    }
+}

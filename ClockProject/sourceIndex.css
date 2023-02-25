@@ -1,0 +1,12 @@
+html {
+    background-color: blanchedalmond;
+}
+
+#divOne {
+    text-align: center;
+}
+
+#canvas {
+    border: 5px solid sienna;
+    border-radius: 5%;
+}

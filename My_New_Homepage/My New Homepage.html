@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My New Homepage 1</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="My New Homepage.css">
+</head>
+
+<body id="body">
+    <h1>Applications of Differential Calculus</h1>
+    <p>There are so many applications of differential calculus but one of them includes the following&colon; <span id="span1">Rates of change&period;</span></p>
+    <h2>This is to find the rates of change of the various properties of a Sphere using Differential Calculus&period;</h2>
+    <h4 id="conditionset">If the
+        <div id="dropdown1"><span id="prop1">&lbbrk;Select Property&rbbrk;</span>
+            <div id="dropdown1-content">
+                <span onclick="vol()" id="vol">Volume</span><br/>
+                <span onclick="sur()" id="sur">Surface Area</span><br />
+                <span onclick="cir()" id="cir">Circumference</span><br />
+                <span onclick="crs()" id="crs">Cross-Sectional Area</span><br />
+                <span onclick="chd()" id="chd">Chord</span><br />
+                <span onclick="sec()" id="sec">Sector</span><br />
+                <span onclick="seg()" id="seg">Segment</span>
+                <!--Not needed for now until the JS code has been rectified.-->
+                <span onclick="tri()" id="tri">Triangle</span>
+                <!--Not needed for now until the JS code has been rectified.-->
+                <span onclick="arc()" id="arc">Arc</span><br />
+                <span onclick="dia()" id="dia">Diameter</span><br/>
+                <span onclick="ras()" id="ras">Radius</span><br />
+            </div>
+        </div> of a sphere is
+        <div id="dropdown2"><span id="param1">&lbbrk;Select Parameter&rbbrk;</span>
+            <div id="dropdown2-content">
+                <span onclick="inc()" id="inc">increasing</span><br />
+                <span onclick="dec()" id="dec">decreasing</span>
+            </div>
+        </div> at the rate of
+        <span id="num1" onclick="num1click()">&lbbrk;Click on done to input number&rbbrk;</span>
+        <div id="dropdown3"><span id="unit1">&lbbrk;Select Measurement Unit&rbbrk;</span>
+            <div id="dropdown3-content">
+                <span onclick="CM()" id="cm">cm</span><br />
+                <span onclick="IN()" id="in">in.</span><br />
+                <span onclick="M()" id="m">m</span><br />
+                <span onclick="FT()" id="ft">ft.</span><br />
+                <span onclick="YD()" id="yd">yd.</span><br />
+                <span onclick="MILE()" id="mile">mi.</span><br />
+                <span onclick="KM()" id="km">km</span><br />
+                <span onclick="NMILE()" id="nmile">n mi.</span>
+            </div>
+        </div> per
+        <div id="dropdown4"><span id="rate1">&lbbrk;Select Rate&rbbrk;</span>
+            <div id="dropdown4-content">
+                <span onclick="ms()" id="ms">ms</span><br />
+                <span onclick="s()" id="s">s</span>
+            </div>
+        </div>&comma;<br />find the rate at which the
+        <div id="dropdown5"><span id="prop2">&lbbrk;Select Property&rbbrk;</span>
+            <div id="dropdown5-content">
+                <span onclick="Vol()" id="Vol">Volume</span><br/>
+                <span onclick="Sur()" id="Sur">Surface Area</span><br />
+                <span onclick="Cir()" id="Cir">Circumference</span><br />
+                <span onclick="Crs()" id="Crs">Cross-Sectional Area</span><br />
+                <span onclick="Chd()" id="Chd">Chord</span><br />
+                <span onclick="Sec()" id="Sec">Sector</span><br />
+                <span onclick="Seg()" id="Seg">Segment</span>
+                <!--Not needed for now until the JS code has been rectified.-->
+                <span onclick="Tri()" id="Tri">Triangle</span>
+                <!--Not needed for now until the JS code has been rectified.-->
+                <span onclick="Arc()" id="Arc">Arc</span><br />
+                <span onclick="Dia()" id="Dia">Diameter</span><br/>
+                <span onclick="Ras()" id="Ras">Radius</span><br />
+            </div>
+        </div> is <span id="change">changing</span> when the radius of the sphere is <span id="num2" onclick="num2click()">&lbbrk;Click on done to input radius value&rbbrk;</span>
+        <div id="dropdown6"><span id="unit2">&lbbrk;Select Measurement Unit&rbbrk;</span>
+            <div id="dropdown6-content">
+                <span onclick="Cm()" id="CM">cm</span><br />
+                <span onclick="In()" id="IN">in.</span><br />
+                <span onclick="m()" id="M">m</span><br />
+                <span onclick="Ft()" id="FT">ft.</span><br />
+                <span onclick="Yd()" id="YD">yd.</span><br />
+                <span onclick="Mile()" id="MILE">mi.</span><br />
+                <span onclick="Km()" id="KM">km</span><br />
+                <span onclick="Nmile()" id="NMILE">n mi.</span>
+            </div>
+        </div>
+        <div id="divdone">
+            <div id="divdo" onclick="divclicked()">
+                <span class="spanone">Done</span>
+            </div>
+        </div>
+    </h4>
+    <section id="ans">
+        <hr />
+        <div>The <span id="A">A</span> is <span id="B">B</span> at the rate of <span id="C">C</span> per <span id="D">D</span> when the radius of the sphere is <span id="E">E</span></div>
+    </section>
+    <div class="div2">
+        <p id="firstp"><span class="N1">N</span><span class="i">i</span><span class="c">c</span><span class="e">e</span>
+            <span class="I1">i</span><span class="s">s</span><span class="n2">n</span><span class="apos">&apos;</span><span class="t">t</span>
+            <span class="Ii">i</span><span class="T1">t</span>
+            <span class="quest">&quest;</span></p>
+
+    </div>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <script src="My New Homepage.js" async defer></script>
+</body>
+
+</html>

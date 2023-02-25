@@ -1,0 +1,240 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        --speed: 16s;
+    }
+    
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: #050505;
+        overflow: hidden;
+    }
+    
+    .cube {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        transform-style: preserve-3d;
+        animation: animate var(--speed) linear infinite;
+    }
+    
+    @keyframes animate {
+        0% {
+            transform: rotateX(-30deg) rotateY(0deg);
+        }
+        100% {
+            transform: rotateX(-30deg) rotateY(calc(var(--dir)*360deg));
+        }
+    }
+    
+    #hoveringtext {
+        color: tomato;
+        opacity: 0.3;
+        position: absolute;
+        top: 7vh;
+        left: 20%;
+        font-size: 15px;
+    }
+    
+    .cube div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+    }
+    
+    .cube div span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        background: linear-gradient(#4f0000, #00ec00, #0000f2);
+        transform: rotateY(calc(90deg*var(--1))) translateZ(150px)/*300 /2 is 150 */
+    }
+    
+    .top {
+        text-align: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 300px;
+        height: 300px;
+        background: #222;
+        transform: rotateX(90deg) translateZ(150px);
+    }
+    
+    .top div {
+        position: relative;
+        top: 150px;
+    }
+    
+    .top::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 300px;
+        height: 300px;
+        background: #0000f2;
+        transform: translateZ(-400px);
+        filter: blur(20px);
+        box-shadow: 0 0 120px rgba(0, 0, 255, 0.2), 0 0 200px rgba(0, 0, 255, 0.4), 0 0 300px rgba(0, 0, 255, 0.6), 0 0 400px rgba(0, 0, 255, 0.8), 0 0 500px rgba(0, 0, 255, 1);
+    }
+    
+    .information {
+        border: 2px solid salmon;
+        padding: 110px;
+        position: relative;
+        transform: translateY(-150px);
+        width: 300px;
+        height: 300px;
+        text-align: center;
+    }
+    
+    #info {
+        text-decoration: none;
+        color: aqua;
+        width: fit-content;
+        height: fit-content;
+    }
+    
+    #d {
+        color: brown;
+        font-size: 20px;
+        position: absolute;
+        bottom: 2vh;
+    }
+    
+    #d:hover {
+        color: green;
+        font-size: 25px;
+        font-weight: bold;
+    }
+    
+    .rb {
+        transform: rotateZ(90deg);
+    }
+    
+    #dinfo {
+        display: none;
+        position: absolute;
+        border: 2px solid maroon;
+        background: peachpuff;
+        padding: 5px;
+        bottom: 5vh;
+        width: 150px;
+        height: fit-content;
+    }
+    
+    #d:hover #dinfo {
+        display: inline-block;
+        font-size: 20px;
+        font-weight: normal;
+    }
+    
+    #u {
+        color: brown;
+        font-size: 20px;
+        position: absolute;
+        top: 2vh;
+    }
+    
+    #u:hover {
+        color: green;
+        font-size: 25px;
+        font-weight: bold;
+        color: brown;
+    }
+    
+    .lb {
+        transform: rotateZ(90deg);
+    }
+    
+    #uinfo {
+        display: none;
+        position: absolute;
+        border: 2px solid maroon;
+        background: peachpuff;
+        padding: 5px;
+        top: 5vh;
+        width: 150px;
+        height: fit-content;
+    }
+    
+    #u:hover #uinfo {
+        display: inline-block;
+        font-size: 20px;
+        font-weight: normal;
+        color: brown;
+    }
+    
+    #l {
+        color: brown;
+        font-size: 20px;
+        position: absolute;
+        bottom: 50%;
+        left: 2vw;
+    }
+    
+    #l:hover {
+        color: green;
+        font-size: 25px;
+        font-weight: bold;
+    }
+    
+    #linfo {
+        display: none;
+        position: absolute;
+        border: 2px solid maroon;
+        background: peachpuff;
+        padding: 5px;
+        left: 2vw;
+        width: 150px;
+        height: fit-content;
+    }
+    
+    #l:hover #linfo {
+        display: inline-block;
+        font-size: 20px;
+        font-weight: normal;
+        color: brown;
+    }
+    
+    #r {
+        color: brown;
+        font-size: 20px;
+        position: absolute;
+        bottom: 50%;
+        right: 2vw;
+    }
+    
+    #r:hover {
+        color: green;
+        font-size: 25px;
+        font-weight: bold;
+    }
+    
+    #rinfo {
+        display: none;
+        position: absolute;
+        border: 2px solid maroon;
+        background: peachpuff;
+        padding: 5px;
+        right: 2vw;
+        width: 150px;
+        height: fit-content;
+    }
+    
+    #r:hover #rinfo {
+        display: inline-block;
+        color: brown;
+        font-size: 20px;
+        font-weight: normal;
+    }

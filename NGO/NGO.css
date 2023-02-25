@@ -1,0 +1,185 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #DFDFDF;
+    overflow-x: hidden;
+}
+
+.title {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+}
+
+h1 {
+    text-align: center;
+    font-size: 7vmin;
+    color: transparent;
+    font-family: 'Rammetto One', cursive;
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIe787NHUlBMkofqvRaLhxxW9qq0ViWc854EgtAn6GRyr2GHGP6w');
+    background-position: center;
+    -webkit-background-clip: text;
+    background-clip: text;
+    opacity: 0;
+    animation: fade 800ms linear 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        letter-spacing: 20px;
+    }
+    to {
+        opacity: 1;
+        letter-spacing: 0px;
+    }
+}
+
+.menu {
+    position: relative;
+    animation: topp 800ms linear 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes topp {
+    from {
+        top: -5em;
+    }
+    to {
+        top: .5em;
+    }
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu ul li {
+    position: relative;
+    display: inline-block;
+    color: #625673;
+    margin-left: 2em;
+    font-size: 1.5rem;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.menu ul li:nth-child(4) {
+    margin-right: 2em;
+    font-weight: 700;
+}
+
+.menu ul li::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background-color: #444;
+    position: absolute;
+    bottom: -4px;
+    width: 0%;
+    transition: all ease-in-out 250ms;
+}
+
+.menu ul li:hover::before {
+    width: 100%;
+}
+
+@media screen and (max-width:700px) {
+    .menu ul li {
+        display: block;
+        width: 100%;
+        line-height: 1.5em;
+    }
+    .menu ul li::before {
+        width: 0;
+    }
+    .menu ul li:hover::before {
+        width: 100%;
+    }
+    .menu ul li:nth-child(4) {
+        margin-right: -2em;
+    }
+}
+
+.menu1 {
+    position: absolute;
+    bottom: 1em;
+    animation: leftt 800ms linear 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes leftt {
+    from {
+        left: -8em;
+    }
+    to {
+        left: 2em;
+    }
+}
+
+.menu1 ul,
+.menu3 ul {
+    list-style: none;
+}
+
+.menu1 ul li,
+.menu3 ul li {
+    color: #625673;
+    display: block;
+    line-height: 1.5rem;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.menu3 {
+    position: absolute;
+    bottom: 1em;
+    animation: rightt 800ms linear 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes rightt {
+    from {
+        right: -6em;
+    }
+    to {
+        right: 3em;
+    }
+}
+
+.menu3 ul li {
+    line-height: 2rem;
+    font-size: 1.25rem;
+}
+
+.menu3 ul li:nth-child(1):hover {
+    color: blue;
+}
+
+.menu3 ul li:nth-child(2):hover {
+    color: #3498db;
+}
+
+.menu3 ul li:nth-child(3):hover {
+    color: #cc4567;
+}
+
+
+/* not working */
+
+@media screen and (max-width: 400px) {
+    .menu3 {
+        bottom: 4em;
+        left: 2em;
+    }
+    .menu3 ul li {
+        display: inline;
+    }
+}
+
+
+/* not working */

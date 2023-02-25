@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>
+        My Homepage 3
+    </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../Homepage_2/My Homepage 2.css">
+</head>
+<script>
+    function main() {
+        var prodID = readLine();
+        var price = parseInt(readLine(), 10);
+        var discount = parseInt(readLine(), 10);
+
+        var prod1 = new Product(prodID, price);
+        console.log(prod1.prodID + " price: " + prod1.price);
+
+        prod1.changePrice(discount);
+        console.log(prod1.prodID + " new price: " + prod1.price);
+    }
+
+    function Product(prodID, price) {
+        this.prodID = prodID;
+        this.price = price;
+
+        this.changePrice = function(discount) {
+            //your code goes here
+            this.price = price - ((discount / 100) * price);
+        }
+    }
+
+    function main() {
+        //take flight number and its status
+        var flightNumber = readLine();
+        var flightStatus = readLine();
+
+        var flight1 = new Flight(flightNumber, flightStatus);
+        //assign a flight object to flight1 variable
+
+        //output
+        ('The flight ' + flight1.number + ' is ' + flight1.status);
+
+    }
+
+    function Flight(flightNumber, status) {
+        //fix the constructor
+        this.number = flightNumber;
+        this.status = status;
+    };
+
+    function sayhello(name, age) {
+        alert("Hi, " + name);
+        document.write("Hope you are doing fine " + name + "." + "<br />");
+        document.write("Note that you are " + age + " years old according to the value you inputted." + "<br />");
+        return age;
+    }
+    var e = new Date();
+    document.write(e);
+
+    sayhello(prompt("Please enter name."), prompt("Please enter your age."));
+    var day = prompt("Please enter day in Capital letters.");
+    if (day === "MONDAY") document.write("<h2>It's a wonderful Monday isn't it?</h2>" + "<br />");
+    else if (day === "TUESDAY") document.write("<h2>What a nice Tuesday!</h2>" + "<br />");
+    else if (day === "WEDNESDAY") document.write("<h2>Oh! Such a lovely Wedneday.</h2>" + "<br />");
+    else if (day === "THURSDAY") document.write("<h2>A fine Thursday.</h2>" + "<br />");
+    else if (day === "FRIDAY") document.write("<h2>Get ready for the weekend lol.</h2>" + "<br />");
+    else if (day === "SATURDAY") document.write("<h2>Some don't go to work on this day</h2>" + "<br />");
+    else if (day === "SUNDAY") document.write("<h2>Buckle up for the coming week!" + "<br />");
+    else document.write("<h2>You didn't give a valid input?</h2>" + "<br />");
+
+
+
+    var depth = prompt("If a snail is in a well and it climbs up 7 meters in the day and slides down 2 metres in the night. " +
+        "How many days will it have gone if it has gone x meters? " +
+        "Please enter depth value of x meters in numbers to get the answer in days.")
+    for (t = 0; t <= depth;) {
+        t = t + 7;
+        if (t >= depth)
+            break;
+        else
+            t + 7 - 2;
+    }
+    var day = (t - (t % 5)) / 5;
+
+    function dayvalue(day) {
+        document.write("The snail has gone " + day + " days.");
+    }
+
+    dayvalue(day);
+
+    //We are creating this object using the Object Literal (or Initializer) syntax.
+    var person = {
+        name: "James",
+        age: 32
+    };
+    var person1 = person.name;
+    var person2 = person['age'];
+    document.write(person1 + person2 + "<br />");
+    document.write("Number of letters (including the characters and spaces if any), in name submitted= " + person.name.length + "<br />");
+    var courses = ["HTML", "CSS", "JS"];
+    var len = courses.length;
+    for (i = 0; i < len; i++) {
+        alert(courses[i]);
+    }
+    document.write("No. of courses= " + i + "<br />");
+
+    //We now want to create an object using the Object Constructor syntax.
+    function people(name, age, favColor) {
+        this.name = name;
+        this.age = age;
+        this.favColor = favColor;
+        this.yearOfBirth = bornYear;
+    }
+
+    function bornYear() {
+        return 2022 - this.age;
+    }
+    var p1 = new people("John", 42, "green");
+    var p2 = new people("Amy", 21, "red");
+    document.write(p1.name + " " + p1.age + " " + p1.yearOfBirth() + "<br />"); //Outputs the name and age of p1 with the year of birth and forces a line break.
+    document.write(p2.name + " " + p2.age + " " + p2.yearOfBirth() + "<br />"); //Outputs the name and age of p2 with the year of birth and also forces a line break.
+    function whatever(identity, color) {
+        this.identity = identity;
+        this.color = color;
+        this.changeIdentity = function(newIdentity) {
+            this.identity = newIdentity;
+        }
+    }
+    var t = new whatever("David", "black");
+    t.changeIdentity("blue");
+    document.write(t.identity + "<br />");
+
+    function contact(name, number) {
+        this.name = name;
+        this.number = number;
+        this.print = function(method) {
+            this.method = this.name + ": " + this.number;
+        }
+    }
+    var a = new contact("David", 12345);
+    var b = new contact("Amy", 987654321);
+    a.print();
+    b.print();
+    document.write(a.method + "<br />");
+    document.write(b.method + "<br />");
+    // We are using the Array Constructor syntax to create these arrays.
+    var what = new Array("Array", "Array 2", "Array 3");
+    var what1 = what[2]; //Array 3
+    what[0] = "Array 1"; // Changes the first element from Array to Array 1
+    var can = new Array(2);
+    can[0] = "can 1";
+    can[1] = "can 2";
+    var should = new Array();
+    should[0] = "what is it";
+    should[1] = "what was it";
+    //We are using the Array Literal syntax here, as in right about now.
+    var literal = ["First array", "Second array", "Third Array"];
+    //Associative Arrays
+    var associative = []; //Javascript will convert the array to an object.
+    associative["associate name"] = "Geoffrey";
+    associative["associate age"] = 58;
+    var combination = literal.concat(associative);
+    document.write(combination.length);
+    document.write(Math.PI + "<br />");
+    document.write(Math.E + "<br />");
+    document.write(Math.ceil(Math.random() * 10));
+</script>
+
+</html>

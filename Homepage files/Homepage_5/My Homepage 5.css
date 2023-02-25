@@ -1,0 +1,43 @@
+h1 {
+    color: red;
+}
+
+p {
+    text-indent: 20px;
+}
+
+#container {
+    width: 500px;
+    height: 500px;
+    background: goldenrod;
+    position: relative;
+}
+
+#box {
+    width: 100px;
+    height: 100px;
+    background: burlywood;
+    position: absolute;
+}
+
+#containers {
+    width: 200px;
+    height: 300px;
+    background: green;
+    position: relative;
+}
+
+#boxes {
+    width: 70px;
+    height: 40px;
+    background: red;
+    position: absolute;
+}
+
+#boxing {
+    width: 70px;
+    height: 40px;
+    background: burlywood;
+    position: absolute;
+    mix-blend-mode: darken;
+}

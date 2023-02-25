@@ -1,0 +1,2347 @@
+/*This is the root of the html document*/
+
+html {
+    background-color: green;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    height: 100%;
+    font-size: 1em;
+    user-select: none;
+}
+
+
+/*This is the div containing the styling of the whole content of the puzzleblock nested inside the puzzle body*/
+
+.puzzlebody {
+    margin-top: 5em;
+    margin-bottom: 5em;
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+
+/*Div controlling the styling of the individual words of puzzle 1*/
+
+.puzzleblock .puzzleword {
+    display: flex;
+}
+
+
+/*Div controlling the styling of the individual letters of puzzle 2*/
+
+.puzzleblock .puzzleword .puzzleletter {
+    width: 2em;
+    height: 2em;
+    margin: 0.05em;
+    background-color: #555;
+    color: blanchedalmond;
+    text-align: center;
+    user-select: none;
+    position: relative;
+    order: 2;
+    right: 50%;
+}
+
+.puzzleblock .puzzleword .puzzleletter :before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.puzzleblock .puzzleword .puzzleletter:last-child {
+    margin-right: auto;
+}
+
+.puzzleblock .puzzleword .pivot {
+    background-color: #75a987;
+}
+
+.puzzleblock .puzzleword .pivot,
+.puzzleblock .puzzleword .pivot~.puzzleletter {
+    order: 1;
+    left: 50%;
+}
+
+.puzzleblock .puzzleword>* {
+    transition: all linear 1s;
+    -o-transition: all linear 1s;
+    -webkit-transition: all linear 1s;
+    -moz-transition: all linear 1s;
+}
+
+.puzzleblock .puzzleword>*:hover {
+    border: 3px solid gold;
+    border-radius: 50%;
+    color: black;
+    background-color: darkkhaki!important;
+    box-sizing: border-box;
+}
+
+
+/*CSS Styling for the first line of letters*/
+
+.puzzleblock .puzzlecontainer1 .puzzleletter:nth-child(1) {
+    animation: crosstalk1 6s ease-in-out 3s infinite alternate forwards;
+    -moz-animation: crosstalk1 6s ease-in-out 3s infinite alternate forwards;
+    -o-animation: crosstalk1 6s ease-in-out 3s infinite alternate forwards;
+    -webkit-animation: crosstalk1 6s ease-in-out 3s infinite alternate forwards;
+}
+
+@keyframes crosstalk1 {
+    0% {
+        background-color: #555;
+    }
+    10% {
+        background-color: maroon;
+    }
+    20% {
+        background-color: #555;
+    }
+    100% {
+        background-color: #555;
+    }
+}
+
+.puzzleblock .puzzlecontainer1 .puzzleletter:nth-child(2) {
+    animation: crosstalk2 6s ease-in-out 3s infinite alternate forwards;
+    -moz-animation: crosstalk2 6s ease-in-out 3s infinite alternate forwards;
+    -o-animation: crosstalk2 6s ease-in-out 3s infinite alternate forwards;
+    -webkit-animation: crosstalk2 6s ease-in-out 3s infinite alternate forwards;
+}
+
+@keyframes crosstalk2 {
+    0% {
+        background-color: #555;
+    }
+    10% {
+        background-color: #555;
+    }
+    20% {
+        background-color: maroon;
+    }
+    30% {
+        background-color: #555;
+    }
+    100% {
+        background-color: #555;
+    }
+}
+
+.puzzleblock .puzzlecontainer1 .puzzleletter:nth-child(3) {
+    animation: crosstalk3 6s ease-in-out 3s infinite alternate forwards;
+    -moz-animation: crosstalk3 6s ease-in-out 3s infinite alternate forwards;
+    -o-animation: crosstalk3 6s ease-in-out 3s infinite alternate forwards;
+    -webkit-animation: crosstalk3 6s ease-in-out 3s infinite alternate forwards;
+}
+
+@keyframes crosstalk3 {
+    0% {
+        background-color: #555;
+    }
+    10% {
+        background-color: #555;
+    }
+    20% {
+        background-color: #555;
+    }
+    30% {
+        background-color: maroon;
+    }
+    40% {
+        background-color: #555;
+    }
+    100% {
+        background-color: #555;
+    }
+}
+
+.puzzleblock .puzzlecontainer1 .puzzleletter:nth-child(4) {
+    animation: crosstalk4 6s ease-in-out 3s infinite alternate forwards;
+    -moz-animation: crosstalk4 6s ease-in-out 3s infinite alternate forwards;
+    -o-animation: crosstalk4 6s ease-in-out 3s infinite alternate forwards;
+    -webkit-animation: crosstalk4 6s ease-in-out 3s infinite alternate forwards;
+}
+
+@keyframes crosstalk4 {
+    0% {
+        background-color: #555;
+    }
+    10% {
+        background-color: #555;
+    }
+    20% {
+        background-color: #555;
+    }
+    30% {
+        background-color: #555;
+    }
+    40% {
+        background-color: maroon;
+    }
+    50% {
+        background-color: #555;
+    }
+    100% {
+        background-color: #555;
+    }
+}
+
+.puzzleblock .puzzlecontainer1 .puzzleletter:nth-child(5) {
+    animation: crosstalk5 6s ease-in-out 3s infinite alternate forwards;
+    -moz-animation: crosstalk5 6s ease-in-out 3s infinite alternate forwards;
+    -o-animation: crosstalk5 6s ease-in-out 3s infinite alternate forwards;
+    -webkit-animation: crosstalk5 6s ease-in-out 3s infinite alternate forwards;
+}
+
+@keyframes crosstalk5 {
+    0% {
+        background-color: #75a987;
+    }
+    10% {
+        background-color: #75a987;
+    }
+    20% {
+        background-color: #75a987;
+    }
+    30% {
+        background-color: #75a987;
+    }
+    40% {
+        background-color: #75a987;
+    }
+    50% {
+        background-color: maroon;
+    }
+    60% {
+        background-color: #75a987;
+    }
+    100% {
+        background-color: #75a987;
+    }
+}
+
+.puzzleblock .puzzlecontainer1 .puzzleletter:nth-child(6) {
+    animation: crosstalk6 6s ease-in-out 3s infinite alternate forwards;
+    -moz-animation: crosstalk6 6s ease-in-out 3s infinite alternate forwards;
+    -o-animation: crosstalk6 6s ease-in-out 3s infinite alternate forwards;
+    -webkit-animation: crosstalk6 6s ease-in-out 3s infinite alternate forwards;
+}
+
+@keyframes crosstalk6 {
+    0% {
+        background-color: #555;
+    }
+    10% {
+        background-color: #555;
+    }
+    20% {
+        background-color: #555;
+    }
+    30% {
+        background-color: #555;
+    }
+    40% {
+        background-color: #555;
+    }
+    50% {
+        background-color: #555;
+    }
+    60% {
+        background-color: maroon;
+    }
+    70% {
+        background-color: #555;
+    }
+    100% {
+        background-color: #555;
+    }
+}
+
+.puzzleblock .puzzlecontainer1 .puzzleletter:nth-child(7) {
+    animation: crosstalk7 6s ease-in-out 3s infinite alternate forwards;
+    -moz-animation: crosstalk7 6s ease-in-out 3s infinite alternate forwards;
+    -o-animation: crosstalk7 6s ease-in-out 3s infinite alternate forwards;
+    -webkit-animation: crosstalk7 6s ease-in-out 3s infinite alternate forwards;
+}
+
+@keyframes crosstalk7 {
+    0% {
+        background-color: #555;
+    }
+    10% {
+        background-color: #555;
+    }
+    20% {
+        background-color: #555;
+    }
+    30% {
+        background-color: #555;
+    }
+    40% {
+        background-color: #555;
+    }
+    50% {
+        background-color: #555;
+    }
+    60% {
+        background-color: #555;
+    }
+    70% {
+        background-color: maroon;
+    }
+    80% {
+        background-color: #555;
+    }
+    100% {
+        background-color: #555;
+    }
+}
+
+.puzzleblock .puzzlecontainer1 .puzzleletter:nth-child(8) {
+    animation: crosstalk8 6s ease-in-out 3s infinite alternate forwards;
+    -moz-animation: crosstalk8 6s ease-in-out 3s infinite alternate forwards;
+    -o-animation: crosstalk8 6s ease-in-out 3s infinite alternate forwards;
+    -webkit-animation: crosstalk8 6s ease-in-out 3s infinite alternate forwards;
+}
+
+@keyframes crosstalk8 {
+    0% {
+        background-color: #555;
+    }
+    10% {
+        background-color: #555;
+    }
+    20% {
+        background-color: #555;
+    }
+    30% {
+        background-color: #555;
+    }
+    40% {
+        background-color: #555;
+    }
+    50% {
+        background-color: #555;
+    }
+    60% {
+        background-color: #555;
+    }
+    70% {
+        background-color: #555;
+    }
+    80% {
+        background-color: maroon;
+    }
+    90% {
+        background-color: #555;
+    }
+    100% {
+        background-color: #555;
+    }
+}
+
+.puzzleblock .puzzlecontainer1 .puzzleletter:nth-child(9) {
+    animation: crosstalk9 6s ease-in-out 3s infinite alternate forwards;
+    -moz-animation: crosstalk9 6s ease-in-out 3s infinite alternate forwards;
+    -o-animation: crosstalk9 6s ease-in-out 3s infinite alternate forwards;
+    -webkit-animation: crosstalk9 6s ease-in-out 3s infinite alternate forwards;
+}
+
+@keyframes crosstalk9 {
+    0% {
+        background-color: #555;
+    }
+    10% {
+        background-color: #555;
+    }
+    20% {
+        background-color: #555;
+    }
+    30% {
+        background-color: #555;
+    }
+    40% {
+        background-color: #555;
+    }
+    50% {
+        background-color: #555;
+    }
+    60% {
+        background-color: #555;
+    }
+    70% {
+        background-color: #555;
+    }
+    80% {
+        background-color: #555;
+    }
+    90% {
+        background-color: maroon;
+    }
+    100% {
+        background-color: #555;
+    }
+}
+
+
+/*CSS Styling for the second line of letters*/
+
+.puzzleblock .puzzlecontainer2 .puzzleletter:nth-child(1) {
+    animation: crosstalk10 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -moz-animation: crosstalk10 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -o-animation: crosstalk10 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -webkit-animation: crosstalk10 6s ease-in-out 3s infinite alternate-reverse forwards;
+}
+
+@keyframes crosstalk10 {
+    0% {
+        background-color: #555;
+    }
+    11.11% {
+        background-color: chocolate;
+    }
+    22.22% {
+        background-color: #555;
+    }
+    100% {
+        background-color: #555;
+    }
+}
+
+.puzzleblock .puzzlecontainer2 .puzzleletter:nth-child(2) {
+    animation: crosstalk11 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -moz-animation: crosstalk11 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -o-animation: crosstalk11 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -webkit-animation: crosstalk11 6s ease-in-out 3s infinite alternate-reverse forwards;
+}
+
+@keyframes crosstalk11 {
+    0% {
+        background-color: #75a987;
+    }
+    11.11% {
+        background-color: #75a987;
+    }
+    22.22% {
+        background-color: chocolate;
+    }
+    33.33% {
+        background-color: #75a987;
+    }
+    100% {
+        background-color: #75a987;
+    }
+}
+
+.puzzleblock .puzzlecontainer2 .puzzleletter:nth-child(3) {
+    animation: crosstalk12 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -moz-animation: crosstalk12 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -o-animation: crosstalk12 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -webkit-animation: crosstalk12 6s ease-in-out 3s infinite alternate-reverse forwards;
+}
+
+@keyframes crosstalk12 {
+    0% {
+        background-color: #555;
+    }
+    11.11% {
+        background-color: #555;
+    }
+    22.22% {
+        background-color: #555;
+    }
+    33.33% {
+        background-color: chocolate;
+    }
+    44.44% {
+        background-color: #555;
+    }
+    100% {
+        background-color: #555;
+    }
+}
+
+.puzzleblock .puzzlecontainer2 .puzzleletter:nth-child(4) {
+    animation: crosstalk13 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -moz-animation: crosstalk13 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -o-animation: crosstalk13 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -webkit-animation: crosstalk13 6s ease-in-out 3s infinite alternate-reverse forwards;
+}
+
+@keyframes crosstalk13 {
+    0% {
+        background-color: #555;
+    }
+    11.11% {
+        background-color: #555;
+    }
+    22.22% {
+        background-color: #555;
+    }
+    33.33% {
+        background-color: #555;
+    }
+    44.44% {
+        background-color: chocolate;
+    }
+    55.56% {
+        background-color: #555;
+    }
+    100% {
+        background-color: #555;
+    }
+}
+
+.puzzleblock .puzzlecontainer2 .puzzleletter:nth-child(5) {
+    animation: crosstalk14 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -moz-animation: crosstalk14 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -o-animation: crosstalk14 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -webkit-animation: crosstalk14 6s ease-in-out 3s infinite alternate-reverse forwards;
+}
+
+@keyframes crosstalk14 {
+    0% {
+        background-color: #555;
+    }
+    11.11% {
+        background-color: #555;
+    }
+    22.22% {
+        background-color: #555;
+    }
+    33.33% {
+        background-color: #555;
+    }
+    44.44% {
+        background-color: #555;
+    }
+    55.56% {
+        background-color: chocolate;
+    }
+    66.67% {
+        background-color: #555;
+    }
+    100% {
+        background-color: #555;
+    }
+}
+
+.puzzleblock .puzzlecontainer2 .puzzleletter:nth-child(6) {
+    animation: crosstalk15 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -moz-animation: crosstalk15 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -o-animation: crosstalk15 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -webkit-animation: crosstalk15 6s ease-in-out 3s infinite alternate-reverse forwards;
+}
+
+@keyframes crosstalk15 {
+    0% {
+        background-color: #555;
+    }
+    11.11% {
+        background-color: #555;
+    }
+    22.22% {
+        background-color: #555;
+    }
+    33.33% {
+        background-color: #555;
+    }
+    44.44% {
+        background-color: #555;
+    }
+    55.56% {
+        background-color: #555;
+    }
+    66.67% {
+        background-color: chocolate;
+    }
+    77.78% {
+        background-color: #555;
+    }
+    100% {
+        background-color: #555;
+    }
+}
+
+.puzzleblock .puzzlecontainer2 .puzzleletter:nth-child(7) {
+    animation: crosstalk16 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -moz-animation: crosstalk16 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -o-animation: crosstalk16 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -webkit-animation: crosstalk16 6s ease-in-out 3s infinite alternate-reverse forwards;
+}
+
+@keyframes crosstalk16 {
+    0% {
+        background-color: #555;
+    }
+    11.11% {
+        background-color: #555;
+    }
+    22.22% {
+        background-color: #555;
+    }
+    33.33% {
+        background-color: #555;
+    }
+    44.44% {
+        background-color: #555;
+    }
+    55.56% {
+        background-color: #555;
+    }
+    66.67% {
+        background-color: #555;
+    }
+    77.78% {
+        background-color: chocolate;
+    }
+    88.89% {
+        background-color: #555;
+    }
+    100% {
+        background-color: #555;
+    }
+}
+
+.puzzleblock .puzzlecontainer2 .puzzleletter:nth-child(8) {
+    animation: crosstalk17 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -moz-animation: crosstalk17 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -o-animation: crosstalk17 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -webkit-animation: crosstalk17 6s ease-in-out 3s infinite alternate-reverse forwards;
+}
+
+@keyframes crosstalk17 {
+    0% {
+        background-color: #555;
+    }
+    11.11% {
+        background-color: #555;
+    }
+    22.22% {
+        background-color: #555;
+    }
+    33.33% {
+        background-color: #555;
+    }
+    44.44% {
+        background-color: #555;
+    }
+    55.56% {
+        background-color: #555;
+    }
+    66.67% {
+        background-color: #555;
+    }
+    77.78% {
+        background-color: #555;
+    }
+    88.89% {
+        background-color: chocolate;
+    }
+    100% {
+        background-color: #555;
+    }
+}
+
+
+/*CSS Styling for the third line of letters.*/
+
+.puzzleblock .puzzlecontainer3 .puzzleletter:nth-child(1) {
+    animation: crosstalk18 6s ease-in-out 3s infinite alternate forwards;
+    -moz-animation: crosstalk18 6s ease-in-out 3s infinite alternate forwards;
+    -o-animation: crosstalk18 6s ease-in-out 3s infinite alternate forwards;
+    -webkit-animation: crosstalk18 6s ease-in-out 3s infinite alternate forwards;
+}
+
+@keyframes crosstalk18 {
+    0% {
+        background-color: #555;
+    }
+    10% {
+        background-color: darkgoldenrod;
+    }
+    20% {
+        background-color: #555;
+    }
+    100% {
+        background-color: #555;
+    }
+}
+
+.puzzleblock .puzzlecontainer3 .puzzleletter:nth-child(2) {
+    animation: crosstalk19 6s ease-in-out 3s infinite alternate forwards;
+    -moz-animation: crosstalk19 6s ease-in-out 3s infinite alternate forwards;
+    ;
+    -o-animation: crosstalk19 6s ease-in-out 3s infinite alternate forwards;
+    ;
+    -webkit-animation: crosstalk19 6s ease-in-out 3s infinite alternate forwards;
+    ;
+}
+
+@keyframes crosstalk19 {
+    0% {
+        background-color: #555;
+    }
+    10% {
+        background-color: #555;
+    }
+    20% {
+        background-color: darkgoldenrod;
+    }
+    30% {
+        background-color: #555;
+    }
+    100% {
+        background-color: #555;
+    }
+}
+
+.puzzleblock .puzzlecontainer3 .puzzleletter:nth-child(3) {
+    animation: crosstalk20 6s ease-in-out 3s infinite alternate forwards;
+    -moz-animation: crosstalk20 6s ease-in-out 3s infinite alternate forwards;
+    -o-animation: crosstalk20 6s ease-in-out 3s infinite alternate forwards;
+    -webkit-animation: crosstalk20 6s ease-in-out 3s infinite alternate forwards;
+}
+
+@keyframes crosstalk20 {
+    0% {
+        background-color: #75a987;
+    }
+    10% {
+        background-color: #75a987;
+    }
+    20% {
+        background-color: #75a987;
+    }
+    30% {
+        background-color: darkgoldenrod;
+    }
+    40% {
+        background-color: #75a987;
+    }
+    100% {
+        background-color: #75a987;
+    }
+}
+
+.puzzleblock .puzzlecontainer3 .puzzleletter:nth-child(4) {
+    animation: crosstalk21 6s ease-in-out 3s infinite alternate forwards;
+    -moz-animation: crosstalk21 6s ease-in-out 3s infinite alternate forwards;
+    -o-animation: crosstalk21 6s ease-in-out 3s infinite alternate forwards;
+    -webkit-animation: crosstalk21 6s ease-in-out 3s infinite alternate forwards;
+}
+
+@keyframes crosstalk21 {
+    0% {
+        background-color: #555;
+    }
+    10% {
+        background-color: #555;
+    }
+    20% {
+        background-color: #555;
+    }
+    30% {
+        background-color: #555;
+    }
+    40% {
+        background-color: darkgoldenrod;
+    }
+    50% {
+        background-color: #555;
+    }
+    100% {
+        background-color: #555;
+    }
+}
+
+.puzzleblock .puzzlecontainer3 .puzzleletter:nth-child(5) {
+    animation: crosstalk22 6s ease-in-out 3s infinite alternate forwards;
+    -moz-animation: crosstalk22 6s ease-in-out 3s infinite alternate forwards;
+    -o-animation: crosstalk22 6s ease-in-out 3s infinite alternate forwards;
+    -webkit-animation: crosstalk22 6s ease-in-out 3s infinite alternate forwards;
+}
+
+@keyframes crosstalk22 {
+    0% {
+        background-color: #555;
+    }
+    10% {
+        background-color: #555;
+    }
+    20% {
+        background-color: #555;
+    }
+    30% {
+        background-color: #555;
+    }
+    40% {
+        background-color: #555;
+    }
+    50% {
+        background-color: darkgoldenrod;
+    }
+    60% {
+        background-color: #555;
+    }
+    100% {
+        background-color: #555;
+    }
+}
+
+.puzzleblock .puzzlecontainer3 .puzzleletter:nth-child(6) {
+    animation: crosstalk23 6s ease-in-out 3s infinite alternate forwards;
+    -moz-animation: crosstalk23 6s ease-in-out 3s infinite alternate forwards;
+    -o-animation: crosstalk23 6s ease-in-out 3s infinite alternate forwards;
+    -webkit-animation: crosstalk23 6s ease-in-out 3s infinite alternate forwards;
+}
+
+@keyframes crosstalk23 {
+    0% {
+        background-color: #555;
+    }
+    10% {
+        background-color: #555;
+    }
+    20% {
+        background-color: #555;
+    }
+    30% {
+        background-color: #555;
+    }
+    40% {
+        background-color: #555;
+    }
+    50% {
+        background-color: #555;
+    }
+    60% {
+        background-color: darkgoldenrod;
+    }
+    70% {
+        background-color: #555;
+    }
+    100% {
+        background-color: #555;
+    }
+}
+
+.puzzleblock .puzzlecontainer3 .puzzleletter:nth-child(7) {
+    animation: crosstalk24 6s ease-in-out 3s infinite alternate forwards;
+    -moz-animation: crosstalk24 6s ease-in-out 3s infinite alternate forwards;
+    -o-animation: crosstalk24 6s ease-in-out 3s infinite alternate forwards;
+    -webkit-animation: crosstalk24 6s ease-in-out 3s infinite alternate forwards;
+}
+
+@keyframes crosstalk24 {
+    0% {
+        background-color: #555;
+    }
+    10% {
+        background-color: #555;
+    }
+    20% {
+        background-color: #555;
+    }
+    30% {
+        background-color: #555;
+    }
+    40% {
+        background-color: #555;
+    }
+    50% {
+        background-color: #555;
+    }
+    60% {
+        background-color: #555;
+    }
+    70% {
+        background-color: darkgoldenrod;
+    }
+    80% {
+        background-color: #555;
+    }
+    100% {
+        background-color: #555;
+    }
+}
+
+.puzzleblock .puzzlecontainer3 .puzzleletter:nth-child(8) {
+    animation: crosstalk25 6s ease-in-out 3s infinite alternate forwards;
+    -moz-animation: crosstalk25 6s ease-in-out 3s infinite alternate forwards;
+    -o-animation: crosstalk25 6s ease-in-out 3s infinite alternate forwards;
+    -webkit-animation: crosstalk25 6s ease-in-out 3s infinite alternate forwards;
+}
+
+@keyframes crosstalk25 {
+    0% {
+        background-color: #555;
+    }
+    10% {
+        background-color: #555;
+    }
+    20% {
+        background-color: #555;
+    }
+    30% {
+        background-color: #555;
+    }
+    40% {
+        background-color: #555;
+    }
+    50% {
+        background-color: #555;
+    }
+    60% {
+        background-color: #555;
+    }
+    70% {
+        background-color: #555;
+    }
+    80% {
+        background-color: darkgoldenrod;
+    }
+    90% {
+        background-color: #555;
+    }
+    100% {
+        background-color: #555;
+    }
+}
+
+.puzzleblock .puzzlecontainer3 .puzzleletter:nth-child(9) {
+    animation: crosstalk26 6s ease-in-out 3s infinite alternate forwards;
+    -moz-animation: crosstalk26 6s ease-in-out 3s infinite alternate forwards;
+    -o-animation: crosstalk26 6s ease-in-out 3s infinite alternate forwards;
+    -webkit-animation: crosstalk26 6s ease-in-out 3s infinite alternate forwards;
+}
+
+@keyframes crosstalk26 {
+    0% {
+        background-color: #555;
+    }
+    10% {
+        background-color: #555;
+    }
+    20% {
+        background-color: #555;
+    }
+    30% {
+        background-color: #555;
+    }
+    40% {
+        background-color: #555;
+    }
+    50% {
+        background-color: #555;
+    }
+    60% {
+        background-color: #555;
+    }
+    70% {
+        background-color: #555;
+    }
+    80% {
+        background-color: #555;
+    }
+    90% {
+        background-color: darkgoldenrod;
+    }
+    100% {
+        background-color: #555;
+    }
+}
+
+
+/*CSS Styling for the fourth line of letters*/
+
+.puzzleblock .puzzlecontainer4 .puzzleletter:nth-child(1) {
+    animation: crosstalk27 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -moz-animation: crosstalk27 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -o-animation: crosstalk27 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -webkit-animation: crosstalk27 6s ease-in-out 3s infinite alternate-reverse forwards;
+}
+
+@keyframes crosstalk27 {
+    0% {
+        background-color: #75a987;
+    }
+    12.5% {
+        background-color: burlywood;
+    }
+    25% {
+        background-color: #75a987;
+    }
+    100% {
+        background-color: #75a987;
+    }
+}
+
+.puzzleblock .puzzlecontainer4 .puzzleletter:nth-child(2) {
+    animation: crosstalk28 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -moz-animation: crosstalk28 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -o-animation: crosstalk28 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -webkit-animation: crosstalk28 6s ease-in-out 3s infinite alternate-reverse forwards;
+}
+
+@keyframes crosstalk28 {
+    0% {
+        background-color: #555;
+    }
+    12.5% {
+        background-color: #555;
+    }
+    25% {
+        background-color: burlywood;
+    }
+    37.5% {
+        background-color: #555;
+    }
+    100% {
+        background-color: #555;
+    }
+}
+
+.puzzleblock .puzzlecontainer4 .puzzleletter:nth-child(3) {
+    animation: crosstalk29 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -moz-animation: crosstalk29 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -o-animation: crosstalk29 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -webkit-animation: crosstalk29 6s ease-in-out 3s infinite alternate-reverse forwards;
+}
+
+@keyframes crosstalk29 {
+    0% {
+        background-color: #555;
+    }
+    12.5% {
+        background-color: #555;
+    }
+    25% {
+        background-color: #555;
+    }
+    37.5% {
+        background-color: burlywood;
+    }
+    50% {
+        background-color: #555;
+    }
+    100% {
+        background-color: #555;
+    }
+}
+
+.puzzleblock .puzzlecontainer4 .puzzleletter:nth-child(4) {
+    animation: crosstalk30 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -moz-animation: crosstalk30 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -o-animation: crosstalk30 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -webkit-animation: crosstalk30 6s ease-in-out 3s infinite alternate-reverse forwards;
+}
+
+@keyframes crosstalk30 {
+    0% {
+        background-color: #555;
+    }
+    12.5% {
+        background-color: #555;
+    }
+    25% {
+        background-color: #555;
+    }
+    37.5% {
+        background-color: #555;
+    }
+    50% {
+        background-color: burlywood;
+    }
+    62.5% {
+        background-color: #555;
+    }
+    100% {
+        background-color: #555;
+    }
+}
+
+.puzzleblock .puzzlecontainer4 .puzzleletter:nth-child(5) {
+    animation: crosstalk31 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -moz-animation: crosstalk31 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -o-animation: crosstalk31 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -webkit-animation: crosstalk31 6s ease-in-out 3s infinite alternate-reverse forwards;
+}
+
+@keyframes crosstalk31 {
+    0% {
+        background-color: #555;
+    }
+    12.5% {
+        background-color: #555;
+    }
+    25% {
+        background-color: #555;
+    }
+    37.5% {
+        background-color: #555;
+    }
+    50% {
+        background-color: #555;
+    }
+    62.5% {
+        background-color: burlywood;
+    }
+    75% {
+        background-color: #555;
+    }
+    100% {
+        background-color: #555;
+    }
+}
+
+.puzzleblock .puzzlecontainer4 .puzzleletter:nth-child(6) {
+    animation: crosstalk32 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -moz-animation: crosstalk32 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -o-animation: crosstalk32 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -webkit-animation: crosstalk32 6s ease-in-out 3s infinite alternate-reverse forwards;
+}
+
+@keyframes crosstalk32 {
+    0% {
+        background-color: #555;
+    }
+    12.5% {
+        background-color: #555;
+    }
+    25% {
+        background-color: #555;
+    }
+    37.5% {
+        background-color: #555;
+    }
+    50% {
+        background-color: #555;
+    }
+    62.5% {
+        background-color: #555;
+    }
+    75% {
+        background-color: burlywood;
+    }
+    87.5% {
+        background-color: #555;
+    }
+    100% {
+        background-color: #555;
+    }
+}
+
+.puzzleblock .puzzlecontainer4 .puzzleletter:nth-child(7) {
+    animation: crosstalk33 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -moz-animation: crosstalk33 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -o-animation: crosstalk33 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -webkit-animation: crosstalk33 6s ease-in-out 3s infinite alternate-reverse forwards;
+}
+
+@keyframes crosstalk33 {
+    0% {
+        background-color: #555;
+    }
+    12.5% {
+        background-color: #555;
+    }
+    25% {
+        background-color: #555;
+    }
+    37.5% {
+        background-color: #555;
+    }
+    50% {
+        background-color: #555;
+    }
+    62.5% {
+        background-color: #555;
+    }
+    75% {
+        background-color: #555;
+    }
+    87.5% {
+        background-color: burlywood;
+    }
+    100% {
+        background-color: #555;
+    }
+}
+
+
+/*CSS Styling for the fifth line of letters*/
+
+.puzzleblock .puzzlecontainer5 .puzzleletter:nth-child(1) {
+    animation: crosstalk34 6s ease-in-out 3s infinite alternate forwards;
+    -moz-animation: crosstalk34 6s ease-in-out 3s infinite alternate forwards;
+    -o-animation: crosstalk34 6s ease-in-out 3s infinite alternate forwards;
+    -webkit-animation: crosstalk34 6s ease-in-out 3s infinite alternate forwards;
+}
+
+@keyframes crosstalk34 {
+    0% {
+        background-color: #75a987;
+    }
+    14.29% {
+        background-color: cornflowerblue;
+    }
+    28.57% {
+        background-color: #75a987;
+    }
+    100% {
+        background-color: #75a987;
+    }
+}
+
+.puzzleblock .puzzlecontainer5 .puzzleletter:nth-child(2) {
+    animation: crosstalk35 6s ease-in-out 3s infinite alternate forwards;
+    -moz-animation: crosstalk35 6s ease-in-out 3s infinite alternate forwards;
+    -o-animation: crosstalk35 6s ease-in-out 3s infinite alternate forwards;
+    -webkit-animation: crosstalk35 6s ease-in-out 3s infinite alternate forwards;
+}
+
+@keyframes crosstalk35 {
+    0% {
+        background-color: #555;
+    }
+    14.29% {
+        background-color: #555;
+    }
+    28.57% {
+        background-color: cornflowerblue;
+    }
+    42.89% {
+        background-color: #555;
+    }
+    100% {
+        background-color: #555;
+    }
+}
+
+.puzzleblock .puzzlecontainer5 .puzzleletter:nth-child(3) {
+    animation: crosstalk36 6s ease-in-out 3s infinite alternate forwards;
+    -moz-animation: crosstalk36 6s ease-in-out 3s infinite alternate forwards;
+    -o-animation: crosstalk36 6s ease-in-out 3s infinite alternate forwards;
+    -webkit-animation: crosstalk36 6s ease-in-out 3s infinite alternate forwards;
+}
+
+@keyframes crosstalk36 {
+    0% {
+        background-color: #555;
+    }
+    14.29% {
+        background-color: #555;
+    }
+    28.57% {
+        background-color: #555;
+    }
+    42.89% {
+        background-color: cornflowerblue;
+    }
+    57.14% {
+        background-color: #555;
+    }
+    100% {
+        background-color: #555;
+    }
+}
+
+.puzzleblock .puzzlecontainer5 .puzzleletter:nth-child(4) {
+    animation: crosstalk37 6s ease-in-out 3s infinite alternate forwards;
+    -moz-animation: crosstalk37 6s ease-in-out 3s infinite alternate forwards;
+    -o-animation: crosstalk37 6s ease-in-out 3s infinite alternate forwards;
+    -webkit-animation: crosstalk37 6s ease-in-out 3s infinite alternate forwards;
+}
+
+@keyframes crosstalk37 {
+    0% {
+        background-color: #555;
+    }
+    14.29% {
+        background-color: #555;
+    }
+    28.57% {
+        background-color: #555;
+    }
+    42.89% {
+        background-color: #555;
+    }
+    57.14% {
+        background-color: cornflowerblue;
+    }
+    71.49% {
+        background-color: #555;
+    }
+    100% {
+        background-color: #555;
+    }
+}
+
+.puzzleblock .puzzlecontainer5 .puzzleletter:nth-child(5) {
+    animation: crosstalk38 6s ease-in-out 3s infinite alternate forwards;
+    -moz-animation: crosstalk38 6s ease-in-out 3s infinite alternate forwards;
+    -o-animation: crosstalk38 6s ease-in-out 3s infinite alternate forwards;
+    -webkit-animation: crosstalk38 6s ease-in-out 3s infinite alternate forwards;
+}
+
+@keyframes crosstalk38 {
+    0% {
+        background-color: #555;
+    }
+    14.29% {
+        background-color: #555;
+    }
+    28.57% {
+        background-color: #555;
+    }
+    42.89% {
+        background-color: #555;
+    }
+    57.14% {
+        background-color: #555;
+    }
+    71.49% {
+        background-color: cornflowerblue;
+    }
+    85.71% {
+        background-color: #555;
+    }
+    100% {
+        background-color: #555;
+    }
+}
+
+.puzzleblock .puzzlecontainer5 .puzzleletter:nth-child(6) {
+    animation: crosstalk39 6s ease-in-out 3s infinite alternate forwards;
+    -moz-animation: crosstalk39 6s ease-in-out 3s infinite alternate forwards;
+    -o-animation: crosstalk39 6s ease-in-out 3s infinite alternate forwards;
+    -webkit-animation: crosstalk39 6s ease-in-out 3s infinite alternate forwards;
+}
+
+@keyframes crosstalk39 {
+    0% {
+        background-color: #555;
+    }
+    14.29% {
+        background-color: #555;
+    }
+    28.57% {
+        background-color: #555;
+    }
+    42.89% {
+        background-color: #555;
+    }
+    57.14% {
+        background-color: #555;
+    }
+    71.49% {
+        background-color: #555;
+    }
+    85.71% {
+        background-color: cornflowerblue;
+    }
+    100% {
+        background-color: #555;
+    }
+}
+
+
+/*CSS Styling for the sixth line of letters*/
+
+.puzzleblock .puzzlecontainer6 .puzzleletter:nth-child(1) {
+    animation: crosstalk40 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -moz-animation: crosstalk40 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -o-animation: crosstalk40 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -webkit-animation: crosstalk40 6s ease-in-out 3s infinite alternate-reverse forwards;
+}
+
+@keyframes crosstalk40 {
+    0% {
+        background-color: #555;
+    }
+    7.69% {
+        background-color: darkmagenta;
+    }
+    15.38% {
+        background-color: #555;
+    }
+    100% {
+        background-color: #555;
+    }
+}
+
+.puzzleblock .puzzlecontainer6 .puzzleletter:nth-child(2) {
+    animation: crosstalk41 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -moz-animation: crosstalk41 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -o-animation: crosstalk41 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -webkit-animation: crosstalk41 6s ease-in-out 3s infinite alternate-reverse forwards;
+}
+
+@keyframes crosstalk41 {
+    0% {
+        background-color: #555;
+    }
+    7.69% {
+        background-color: #555;
+    }
+    15.38% {
+        background-color: darkmagenta;
+    }
+    23.08% {
+        background-color: #555;
+    }
+    100% {
+        background-color: #555;
+    }
+}
+
+.puzzleblock .puzzlecontainer6 .puzzleletter:nth-child(3) {
+    animation: crosstalk42 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -moz-animation: crosstalk42 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -o-animation: crosstalk42 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -webkit-animation: crosstalk42 6s ease-in-out 3s infinite alternate-reverse forwards;
+}
+
+@keyframes crosstalk42 {
+    0% {
+        background-color: #555;
+    }
+    7.69% {
+        background-color: #555;
+    }
+    15.38% {
+        background-color: #555;
+    }
+    23.08% {
+        background-color: darkmagenta;
+    }
+    30.77% {
+        background-color: #555;
+    }
+    100% {
+        background-color: #555;
+    }
+}
+
+.puzzleblock .puzzlecontainer6 .puzzleletter:nth-child(4) {
+    animation: crosstalk43 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -moz-animation: crosstalk43 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -o-animation: crosstalk43 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -webkit-animation: crosstalk43 6s ease-in-out 3s infinite alternate-reverse forwards;
+}
+
+@keyframes crosstalk43 {
+    0% {
+        background-color: #555;
+    }
+    7.69% {
+        background-color: #555;
+    }
+    15.38% {
+        background-color: #555;
+    }
+    23.08% {
+        background-color: #555;
+    }
+    30.77% {
+        background-color: darkmagenta;
+    }
+    38.46% {
+        background-color: #555;
+    }
+    100% {
+        background-color: #555;
+    }
+}
+
+.puzzleblock .puzzlecontainer6 .puzzleletter:nth-child(5) {
+    animation: crosstalk44 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -moz-animation: crosstalk44 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -o-animation: crosstalk44 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -webkit-animation: crosstalk44 6s ease-in-out 3s infinite alternate-reverse forwards;
+}
+
+@keyframes crosstalk44 {
+    0% {
+        background-color: #555;
+    }
+    7.69% {
+        background-color: #555;
+    }
+    15.38% {
+        background-color: #555;
+    }
+    23.08% {
+        background-color: #555;
+    }
+    30.77% {
+        background-color: #555;
+    }
+    38.46% {
+        background-color: darkmagenta;
+    }
+    46.15% {
+        background-color: #555;
+    }
+    100% {
+        background-color: #555;
+    }
+}
+
+.puzzleblock .puzzlecontainer6 .puzzleletter:nth-child(6) {
+    animation: crosstalk45 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -moz-animation: crosstalk45 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -o-animation: crosstalk45 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -webkit-animation: crosstalk45 6s ease-in-out 3s infinite alternate-reverse forwards;
+}
+
+@keyframes crosstalk45 {
+    0% {
+        background-color: #555;
+    }
+    7.69% {
+        background-color: #555;
+    }
+    15.38% {
+        background-color: #555;
+    }
+    23.08% {
+        background-color: #555;
+    }
+    30.77% {
+        background-color: #555;
+    }
+    38.46% {
+        background-color: #555;
+    }
+    46.15% {
+        background-color: darkmagenta;
+    }
+    53.85% {
+        background-color: #555;
+    }
+    100% {
+        background-color: #555;
+    }
+}
+
+.puzzleblock .puzzlecontainer6 .puzzleletter:nth-child(7) {
+    animation: crosstalk46 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -moz-animation: crosstalk46 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -o-animation: crosstalk46 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -webkit-animation: crosstalk46 6s ease-in-out 3s infinite alternate-reverse forwards;
+}
+
+@keyframes crosstalk46 {
+    0% {
+        background-color: #75a987;
+    }
+    7.69% {
+        background-color: #75a987;
+    }
+    15.38% {
+        background-color: #75a987;
+    }
+    23.08% {
+        background-color: #75a987;
+    }
+    30.77% {
+        background-color: #75a987;
+    }
+    38.46% {
+        background-color: #75a987;
+    }
+    46.15% {
+        background-color: #75a987;
+    }
+    53.85% {
+        background-color: darkmagenta;
+    }
+    61.54% {
+        background-color: #75a987;
+    }
+    100% {
+        background-color: #75a987;
+    }
+}
+
+.puzzleblock .puzzlecontainer6 .puzzleletter:nth-child(8) {
+    animation: crosstalk47 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -moz-animation: crosstalk47 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -o-animation: crosstalk47 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -webkit-animation: crosstalk47 6s ease-in-out 3s infinite alternate-reverse forwards;
+}
+
+@keyframes crosstalk47 {
+    0% {
+        background-color: #555;
+    }
+    7.69% {
+        background-color: #555;
+    }
+    15.38% {
+        background-color: #555;
+    }
+    23.08% {
+        background-color: #555;
+    }
+    30.77% {
+        background-color: #555;
+    }
+    38.46% {
+        background-color: #555;
+    }
+    46.15% {
+        background-color: #555;
+    }
+    53.85% {
+        background-color: #555;
+    }
+    61.54% {
+        background-color: darkmagenta;
+    }
+    69.23% {
+        background-color: #555;
+    }
+    100% {
+        background-color: #555;
+    }
+}
+
+.puzzleblock .puzzlecontainer6 .puzzleletter:nth-child(9) {
+    animation: crosstalk48 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -moz-animation: crosstalk48 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -o-animation: crosstalk48 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -webkit-animation: crosstalk48 6s ease-in-out 3s infinite alternate-reverse forwards;
+}
+
+@keyframes crosstalk48 {
+    0% {
+        background-color: #555;
+    }
+    7.69% {
+        background-color: #555;
+    }
+    15.38% {
+        background-color: #555;
+    }
+    23.08% {
+        background-color: #555;
+    }
+    30.77% {
+        background-color: #555;
+    }
+    38.46% {
+        background-color: #555;
+    }
+    46.15% {
+        background-color: #555;
+    }
+    53.85% {
+        background-color: #555;
+    }
+    61.54% {
+        background-color: #555;
+    }
+    69.23% {
+        background-color: darkmagenta;
+    }
+    76.92% {
+        background-color: #555;
+    }
+    100% {
+        background-color: #555;
+    }
+}
+
+.puzzleblock .puzzlecontainer6 .puzzleletter:nth-child(10) {
+    animation: crosstalk49 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -moz-animation: crosstalk49 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -o-animation: crosstalk49 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -webkit-animation: crosstalk49 6s ease-in-out 3s infinite alternate-reverse forwards;
+}
+
+@keyframes crosstalk49 {
+    0% {
+        background-color: #555;
+    }
+    7.69% {
+        background-color: #555;
+    }
+    15.38% {
+        background-color: #555;
+    }
+    23.08% {
+        background-color: #555;
+    }
+    30.77% {
+        background-color: #555;
+    }
+    38.46% {
+        background-color: #555;
+    }
+    46.15% {
+        background-color: #555;
+    }
+    53.85% {
+        background-color: #555;
+    }
+    61.54% {
+        background-color: #555;
+    }
+    69.23% {
+        background-color: #555;
+    }
+    76.92% {
+        background-color: darkmagenta;
+    }
+    84.62% {
+        background-color: #555;
+    }
+    100% {
+        background-color: #555;
+    }
+}
+
+.puzzleblock .puzzlecontainer6 .puzzleletter:nth-child(11) {
+    animation: crosstalk50 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -moz-animation: crosstalk50 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -o-animation: crosstalk50 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -webkit-animation: crosstalk50 6s ease-in-out 3s infinite alternate-reverse forwards;
+}
+
+@keyframes crosstalk50 {
+    0% {
+        background-color: #555;
+    }
+    7.69% {
+        background-color: #555;
+    }
+    15.38% {
+        background-color: #555;
+    }
+    23.08% {
+        background-color: #555;
+    }
+    30.77% {
+        background-color: #555;
+    }
+    38.46% {
+        background-color: #555;
+    }
+    46.15% {
+        background-color: #555;
+    }
+    53.85% {
+        background-color: #555;
+    }
+    61.54% {
+        background-color: #555;
+    }
+    69.23% {
+        background-color: #555;
+    }
+    76.92% {
+        background-color: #555;
+    }
+    84.62% {
+        background-color: darkmagenta;
+    }
+    92.31% {
+        background-color: #555;
+    }
+    100% {
+        background-color: #555;
+    }
+}
+
+.puzzleblock .puzzlecontainer6 .puzzleletter:nth-child(12) {
+    animation: crosstalk51 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -moz-animation: crosstalk51 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -o-animation: crosstalk51 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -webkit-animation: crosstalk51 6s ease-in-out 3s infinite alternate-reverse forwards;
+}
+
+@keyframes crosstalk51 {
+    0% {
+        background-color: #555;
+    }
+    7.69% {
+        background-color: #555;
+    }
+    15.38% {
+        background-color: #555;
+    }
+    23.08% {
+        background-color: #555;
+    }
+    30.77% {
+        background-color: #555;
+    }
+    38.46% {
+        background-color: #555;
+    }
+    46.15% {
+        background-color: #555;
+    }
+    53.85% {
+        background-color: #555;
+    }
+    61.54% {
+        background-color: #555;
+    }
+    69.23% {
+        background-color: #555;
+    }
+    76.92% {
+        background-color: #555;
+    }
+    84.62% {
+        background-color: #555;
+    }
+    92.31% {
+        background-color: darkmagenta;
+    }
+    100% {
+        background-color: #555;
+    }
+}
+
+
+/*CSS Styling for the seventh line of letters*/
+
+.puzzleblock .puzzlecontainer7 .puzzleletter:nth-child(1) {
+    animation: crosstalk52 6s ease-in-out 3s infinite alternate forwards;
+    -moz-animation: crosstalk52 6s ease-in-out 3s infinite alternate forwards;
+    -o-animation: crosstalk52 6s ease-in-out 3s infinite alternate forwards;
+    -webkit-animation: crosstalk52 6s ease-in-out 3s infinite alternate forwards;
+}
+
+@keyframes crosstalk52 {
+    0% {
+        background-color: #555;
+    }
+    12.5% {
+        background-color: darksalmon;
+    }
+    25% {
+        background-color: #555;
+    }
+    100% {
+        background-color: #555;
+    }
+}
+
+.puzzleblock .puzzlecontainer7 .puzzleletter:nth-child(2) {
+    animation: crosstalk53 6s ease-in-out 3s infinite alternate forwards;
+    -moz-animation: crosstalk53 6s ease-in-out 3s infinite alternate forwards;
+    -o-animation: crosstalk53 6s ease-in-out 3s infinite alternate forwards;
+    -webkit-animation: crosstalk53 6s ease-in-out 3s infinite alternate forwards;
+}
+
+@keyframes crosstalk53 {
+    0% {
+        background-color: #555;
+    }
+    12.5% {
+        background-color: #555;
+    }
+    25% {
+        background-color: darksalmon;
+    }
+    37.5% {
+        background-color: #555;
+    }
+    100% {
+        background-color: #555;
+    }
+}
+
+.puzzleblock .puzzlecontainer7 .puzzleletter:nth-child(3) {
+    animation: crosstalk54 6s ease-in-out 3s infinite alternate forwards;
+    -moz-animation: crosstalk54 6s ease-in-out 3s infinite alternate forwards;
+    -o-animation: crosstalk54 6s ease-in-out 3s infinite alternate forwards;
+    -webkit-animation: crosstalk54 6s ease-in-out 3s infinite alternate forwards;
+}
+
+@keyframes crosstalk54 {
+    0% {
+        background-color: #555;
+    }
+    12.5% {
+        background-color: #555;
+    }
+    25% {
+        background-color: #555;
+    }
+    37.5% {
+        background-color: darksalmon;
+    }
+    50% {
+        background-color: #555;
+    }
+    100% {
+        background-color: #555;
+    }
+}
+
+.puzzleblock .puzzlecontainer7 .puzzleletter:nth-child(4) {
+    animation: crosstalk55 6s ease-in-out 3s infinite alternate forwards;
+    -moz-animation: crosstalk55 6s ease-in-out 3s infinite alternate forwards;
+    -o-animation: crosstalk55 6s ease-in-out 3s infinite alternate forwards;
+    -webkit-animation: crosstalk55 6s ease-in-out 3s infinite alternate forwards;
+}
+
+@keyframes crosstalk55 {
+    0% {
+        background-color: #555;
+    }
+    12.5% {
+        background-color: #555;
+    }
+    25% {
+        background-color: #555;
+    }
+    37.5% {
+        background-color: #555;
+    }
+    50% {
+        background-color: darksalmon;
+    }
+    62.5% {
+        background-color: #555;
+    }
+    100% {
+        background-color: #555;
+    }
+}
+
+.puzzleblock .puzzlecontainer7 .puzzleletter:nth-child(5) {
+    animation: crosstalk56 6s ease-in-out 3s infinite alternate forwards;
+    -moz-animation: crosstalk56 6s ease-in-out 3s infinite alternate forwards;
+    -o-animation: crosstalk56 6s ease-in-out 3s infinite alternate forwards;
+    -webkit-animation: crosstalk56 6s ease-in-out 3s infinite alternate forwards;
+}
+
+@keyframes crosstalk56 {
+    0% {
+        background-color: #555;
+    }
+    12.5% {
+        background-color: #555;
+    }
+    25% {
+        background-color: #555;
+    }
+    37.5% {
+        background-color: #555;
+    }
+    50% {
+        background-color: #555;
+    }
+    62.5% {
+        background-color: darksalmon;
+    }
+    75% {
+        background-color: #555;
+    }
+    100% {
+        background-color: #555;
+    }
+}
+
+.puzzleblock .puzzlecontainer7 .puzzleletter:nth-child(6) {
+    animation: crosstalk57 6s ease-in-out 3s infinite alternate forwards;
+    -moz-animation: crosstalk57 6s ease-in-out 3s infinite alternate forwards;
+    -o-animation: crosstalk57 6s ease-in-out 3s infinite alternate forwards;
+    -webkit-animation: crosstalk57 6s ease-in-out 3s infinite alternate forwards;
+}
+
+@keyframes crosstalk57 {
+    0% {
+        background-color: #555;
+    }
+    12.5% {
+        background-color: #555;
+    }
+    25% {
+        background-color: #555;
+    }
+    37.5% {
+        background-color: #555;
+    }
+    50% {
+        background-color: #555;
+    }
+    62.5% {
+        background-color: #555;
+    }
+    75% {
+        background-color: darksalmon;
+    }
+    87.5% {
+        background-color: #555;
+    }
+    100% {
+        background-color: #555;
+    }
+}
+
+.puzzleblock .puzzlecontainer7 .puzzleletter:nth-child(7) {
+    animation: crosstalk58 6s ease-in-out 3s infinite alternate forwards;
+    -moz-animation: crosstalk58 6s ease-in-out 3s infinite alternate forwards;
+    -o-animation: crosstalk58 6s ease-in-out 3s infinite alternate forwards;
+    -webkit-animation: crosstalk58 6s ease-in-out 3s infinite alternate forwards;
+}
+
+@keyframes crosstalk58 {
+    0% {
+        background-color: #75a987;
+    }
+    12.5% {
+        background-color: #75a987;
+    }
+    25% {
+        background-color: #75a987;
+    }
+    37.5% {
+        background-color: #75a987;
+    }
+    50% {
+        background-color: #75a987;
+    }
+    62.5% {
+        background-color: #75a987;
+    }
+    75% {
+        background-color: #75a987;
+    }
+    87.5% {
+        background-color: darksalmon;
+    }
+    100% {
+        background-color: #75a987;
+    }
+}
+
+
+/*CSS Styling for the eigth line of letters*/
+
+.puzzleblock .puzzlecontainer8 .puzzleletter:nth-child(1) {
+    animation: crosstalk59 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -moz-animation: crosstalk59 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -o-animation: crosstalk59 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -webkit-animation: crosstalk59 6s ease-in-out 3s infinite alternate-reverse forwards;
+}
+
+@keyframes crosstalk59 {
+    0% {
+        background-color: #75a987;
+    }
+    16.67% {
+        background-color: greenyellow;
+    }
+    33.33% {
+        background-color: #75a987;
+    }
+    100% {
+        background-color: #75a987;
+    }
+}
+
+.puzzleblock .puzzlecontainer8 .puzzleletter:nth-child(2) {
+    animation: crosstalk60 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -moz-animation: crosstalk60 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -o-animation: crosstalk60 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -webkit-animation: crosstalk60 6s ease-in-out 3s infinite alternate-reverse forwards;
+}
+
+@keyframes crosstalk60 {
+    0% {
+        background-color: #555;
+    }
+    16.67% {
+        background-color: #555;
+    }
+    33.33% {
+        background-color: greenyellow;
+    }
+    50% {
+        background-color: #555;
+    }
+    100% {
+        background-color: #555;
+    }
+}
+
+.puzzleblock .puzzlecontainer8 .puzzleletter:nth-child(3) {
+    animation: crosstalk61 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -moz-animation: crosstalk61 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -o-animation: crosstalk61 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -webkit-animation: crosstalk61 6s ease-in-out 3s infinite alternate-reverse forwards;
+}
+
+@keyframes crosstalk61 {
+    0% {
+        background-color: #555;
+    }
+    16.67% {
+        background-color: #555;
+    }
+    33.33% {
+        background-color: #555;
+    }
+    50% {
+        background-color: greenyellow;
+    }
+    66.67% {
+        background-color: #555;
+    }
+    100% {
+        background-color: #555;
+    }
+}
+
+.puzzleblock .puzzlecontainer8 .puzzleletter:nth-child(4) {
+    animation: crosstalk62 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -moz-animation: crosstalk62 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -o-animation: crosstalk62 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -webkit-animation: crosstalk62 6s ease-in-out 3s infinite alternate-reverse forwards;
+}
+
+@keyframes crosstalk62 {
+    0% {
+        background-color: #555;
+    }
+    16.67% {
+        background-color: #555;
+    }
+    33.33% {
+        background-color: #555;
+    }
+    50% {
+        background-color: #555;
+    }
+    66.67% {
+        background-color: greenyellow;
+    }
+    83.33% {
+        background-color: #555;
+    }
+    100% {
+        background-color: #555;
+    }
+}
+
+.puzzleblock .puzzlecontainer8 .puzzleletter:nth-child(5) {
+    animation: crosstalk63 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -moz-animation: crosstalk63 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -o-animation: crosstalk63 6s ease-in-out 3s infinite alternate-reverse forwards;
+    -webkit-animation: crosstalk63 6s ease-in-out 3s infinite alternate-reverse forwards;
+}
+
+@keyframes crosstalk63 {
+    0% {
+        background-color: #555;
+    }
+    16.67% {
+        background-color: #555;
+    }
+    33.33% {
+        background-color: #555;
+    }
+    50% {
+        background-color: #555;
+    }
+    66.67% {
+        background-color: #555;
+    }
+    83.33% {
+        background-color: greenyellow;
+    }
+    100% {
+        background-color: #555;
+    }
+}
+
+
+/*CSS code section containing styling for Button 1*/
+
+div.button1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-width: 100%;
+    max-height: fit-content;
+    display: block;
+    text-align: center;
+}
+
+button.button1 {
+    display: inline-block;
+    background-color: red;
+    transition: all 0.5s;
+    font-size: 20px;
+    text-align: center;
+    width: 300px;
+    height: fit-content;
+    border: 10px solid rgba( 155, 127, 210, 0.4);
+    background-clip: padding-box;
+    padding: 20px;
+    margin: 3px;
+    opacity: 0.7;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+
+button.button1:hover {
+    background-color: honeydew;
+    opacity: 1;
+    transform: translateY(4px);
+    box-shadow: 0 5px #666;
+}
+
+button.button1:active {
+    background-color: teal;
+}
+
+button.button1 span.button1 {
+    position: relative;
+    display: inline-block;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+span::after {
+    content: '\00bb';
+    color: royalblue;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -40px;
+    transition: 0.5;
+}
+
+button.button1:hover {
+    opacity: 1;
+}
+
+button.button1:hover span.button1 {
+    padding-right: 30px;
+}
+
+button.button1:hover span::after {
+    opacity: 1;
+    right: 0;
+}
+
+a.button1:link {
+    color: rosybrown;
+    text-decoration: none;
+}
+
+a.button1:visited {
+    text-decoration-line: underline;
+    text-decoration-color: brown;
+    text-decoration-style: solid;
+    color: blanchedalmond;
+}
+
+a.button1:hover {
+    color: darkblue;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-color: cadetblue;
+}
+
+a.button1:active {
+    color: coral;
+    text-decoration-style: solid;
+    text-decoration-line: underline;
+    text-decoration-color: cyan;
+    cursor: progress;
+}
+
+
+/*This deals with the styling of My Homepage 2.css link.*/
+
+a.mylink {
+    transition: all 0.5s;
+    color: goldenrod;
+    text-decoration-line: none;
+}
+
+a.mylink:visited {
+    text-decoration-line: underline;
+    text-decoration-color: brown;
+    color: blanchedalmond;
+}
+
+a.mylink:hover {
+    color: cyan;
+    text-decoration-line: underline;
+    text-decoration-color: saddlebrown;
+    font-style: italic;
+}
+
+a.mylink:active {
+    background-color: coral;
+    border-radius: 3px;
+    cursor: progress;
+}
+
+
+/*Styling of the previous link*/
+
+a.previous {
+    position: relative;
+    float: left;
+    background-color: #555;
+    box-sizing: border-box;
+    width: fit-content;
+    height: fit-content;
+    padding: 2px;
+    margin: 5px;
+    font-size: 30px;
+    color: brown;
+    text-decoration: none;
+    transition-property: all;
+    transition-timing-function: linear;
+    transition-duration: 1s;
+    transition-delay: 0.5s;
+}
+
+a.previous:hover {
+    color: burlywood;
+    text-decoration: underline solid burlywood 1px;
+}
+
+
+/*Styling of the next link*/
+
+a.next {
+    position: relative;
+    float: right;
+    background-color: #555;
+    box-sizing: border-box;
+    width: fit-content;
+    height: fit-content;
+    padding: 2px;
+    margin: 5px;
+    font-size: 30px;
+    color: plum;
+    text-decoration: none;
+    transition-property: color, text;
+    transition-timing-function: linear;
+    transition-duration: 1s;
+    transition-delay: 0.5s;
+}
+
+a.next:hover {
+    color: aqua;
+    text-decoration: underline solid aqua 1px;
+}

@@ -1,0 +1,53 @@
+body {
+    background-color: #c3c3c3;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    color: #4c6ebb;
+}
+
+p {
+    text-align: center;
+}
+
+canvas {
+    /*looks like we're about to scale some canvas stuff up*/
+    border: 1px solid blue;
+}
+
+#canvas {
+    width: 100%;
+}
+
+#cs {
+    border-color: red;
+    display: none;
+    /*hiding the first canvas*/
+}
+
+#clear,
+#play,
+.group {
+    display: inline-block;
+    width: fit-content;
+    height: fit-content;
+    border: 1px solid blue;
+    border-radius: 5px;
+    padding: 4px 8px;
+    color: saddlebrown;
+    background-color: seagreen;
+    opacity: 0.6;
+    transition: all 0.5s;
+    cursor: pointer;
+    font-weight: normal;
+    margin: 5px 20px;
+}
+
+#clear:hover,
+#play:hover,
+.group:hover {
+    opacity: 1;
+    font-weight: bold;
+}
