@@ -238,6 +238,7 @@ span.dwda {
     font-style: italic;
     display: inline;
     font-weight: 500;
+    cursor: pointer;
 }
 
 img#myimage1 {
