@@ -1,6 +1,6 @@
-var settings = document.getElementById("settings"); //Refers to the div element with id settings
-var body = document.getElementById('body'); //Refers to the div element with id body
-var section = document.getElementById("overall"); //Refers to the section element with id section
+var settings = document.getElementById("settings");
+var body = document.getElementById('body');
+var section = document.getElementById("overall");
 var settings = document.getElementById("settings");
 var content = document.getElementById('content');
 var set = document.getElementById('set');
@@ -26,9 +26,7 @@ label2.innerHTML = range2.value;
 label3.innerHTML = range3.value;
 label4.innerHTML = range4.value;
 
-
 window.onload = function() {
-
     range1.oninput = function() {
         label1.innerHTML = this.value;
         return label1.innerHTML;
@@ -58,7 +56,6 @@ window.onload = function() {
         body.style.opacity = `${(label4.innerHTML/100)}`;
     }
 
-
     light.onclick = function() {
         body.style.backgroundColor = "white";
         body.style.color = "black";
@@ -74,10 +71,6 @@ window.onload = function() {
         dark.style.opacity = "0.2";
     }
 
-
-
-
-
     dark.onclick = function() {
         body.style.backgroundColor = "black";
         body.style.color = "white";
@@ -92,11 +85,7 @@ window.onload = function() {
         light.style.opacity = "0.2";
         dark.style.opacity = "1";
     }
-
-
-
 }
-
 
 var i = 0;
 document.addEventListener('click', () => {
