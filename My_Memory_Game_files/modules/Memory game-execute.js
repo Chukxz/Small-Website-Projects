@@ -1,4 +1,4 @@
-import { List } from "./Memory game-base.js";
+import { List } from './Memory game-base.js';
 import { Animate } from './js-module-1/animate-bg.js'
 import { Drawcanvas } from './js-module-1/draw-canvas.js'
 import { drawlines } from './js-module-1/draw-lines.js'
@@ -8,14 +8,14 @@ import { converts } from "./js-module-1/exp.js";
 window.onload = function() {
 
     var body = document.querySelector("body")
-    var root = document.querySelector(':root'); //7
-    var para = document.getElementById('para');
+    var root = document.querySelector(':root') //7
+    var para = document.getElementById('para')
     var para2 = document.getElementById('para2')
     var para3 = document.getElementById('para3')
     var overalls = `${window.innerWidth}px`
     var overall = document.getElementById('overall')
     var allpara = document.getElementById('allpara')
-    root.style.setProperty("--overalls", overalls);
+    root.style.setProperty("--overalls", overalls)
     overall.style.marginTop = `${window.innerHeight - (window.innerHeight/10)}px`
     var pass = document.getElementById('pass')
     var passes = document.getElementById('passes')
@@ -84,15 +84,12 @@ window.onload = function() {
     var conv1;
     var conv2;
 
-
-
     const contStr = 'A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z'
     var str = '';
     var contSrc = [];
     var contList1 = [];
     var contList2 = [];
     var uniList = [];
-
 
     if (!localStorage.level) {
         var level = 1
@@ -103,7 +100,6 @@ window.onload = function() {
     var num = Math.ceil(1 + Math.cbrt((0.2 * (2 * Math.pow(level, 2)))));
     localStorage.num = converts.convert(num);
     num = converts.toNum(localStorage.num);
-
 
     var p = (Math.pow(num, 2)) //20
     var bisectStrNum = Math.ceil(p / contStr.length);
@@ -130,7 +126,6 @@ window.onload = function() {
             contList1 = contSrc;
             return contList1
         }
-
 
         //Another example of the Fisher Yates Method
         /* var i = contSrc.length,
@@ -419,10 +414,12 @@ window.onload = function() {
 
     let interact = new Interactive
 
-    function click1() {
-        xclick = event.clientX;
-        yclick = event.clientY;
-        //console.log(xclick, yclick)
+    function click1(e) {
+        xclick = e || event.clientX;
+        yclick = e || event.clientX;
+        xclick.preventDefault()
+        yclick.preventDefault()
+            //console.log(xclick, yclick)
         const rect = canvas.getBoundingClientRect()
         arrX = Math.abs(Math.round(xclick - rect.left.toFixed()))
         arrY = Math.abs(Math.round(yclick - rect.top.toFixed()))
@@ -446,37 +443,34 @@ window.onload = function() {
         return identity = (1 + (num * yres) + xres) - 1;
     }
 
-
-
-
-
     function Styles() {
         var style = window.getComputedStyle(body, null);
         var color = style.getPropertyValue("background-color");
         return color
     }
 
-    function bStyles() {
-        var bstyle = window.getComputedStyle(body, null);
-        var bcolor = bstyle.getPropertyValue("background-color");
-        var ran = Math.floor(Math.random() * 3)
-        var boxList1bgColor = [];
-        boxList1bgColor.splice(0, boxList1bgColor.length)
-        boxList1bgColor[boxList1bgColor.length] = bcolor.replace('rgb', '').replace('(', '').replace(')', '').split(',')
-        if (ran === 0) {
-            boxList1bgColor
-        }
-        if (ran === 1) {
-            boxList1bgColor[0].sort((a, b) => a - b)
-        }
-        if (ran === 2) {
-            boxList1bgColor[0].sort((a, b) => b - a)
-        }
-        boxList1bgColor[0].splice(0, 0, 'start')
-        boxList1bgColor[0].splice(4, 4, 'end')
-        var str = boxList1bgColor[0].toString().replace('start,', 'rgb(').replace(',end', ')')
-        return str
-    }
+    // Disabled, enable to implement changing colors for the boxes
+    // function bStyles() {
+    //     var bstyle = window.getComputedStyle(body, null);
+    //     var bcolor = bstyle.getPropertyValue("background-color");
+    //     var ran = Math.floor(Math.random() * 3)
+    //     var boxList1bgColor = [];
+    //     boxList1bgColor.splice(0, boxList1bgColor.length)
+    //     boxList1bgColor[boxList1bgColor.length] = bcolor.replace('rgb', '').replace('(', '').replace(')', '').split(',')
+    //     if (ran === 0) {
+    //         boxList1bgColor
+    //     }
+    //     if (ran === 1) {
+    //         boxList1bgColor[0].sort((a, b) => a - b)
+    //     }
+    //     if (ran === 2) {
+    //         boxList1bgColor[0].sort((a, b) => b - a)
+    //     }
+    //     boxList1bgColor[0].splice(0, 0, 'start')
+    //     boxList1bgColor[0].splice(4, 4, 'end')
+    //     var str = boxList1bgColor[0].toString().replace('start,', 'rgb(').replace(',end', ')')
+    //     return str
+    // }
 
 
     class Supporters {
@@ -596,8 +590,6 @@ window.onload = function() {
 
     let supporters = new Supporters()
 
-
-
     if (localStorage.PermOne && localStorage.PermTwo) {
         first = converts.toArrayasNum(localStorage.PermOne)
         second = converts.toArrayasNum(localStorage.PermTwo)
@@ -610,7 +602,6 @@ window.onload = function() {
             supporters.change(0, x, specRand)
         }
     }
-
 
     function click2() { //handles all click events in conjunction with functions show and click2 but is local to the render function
         // console.log(boxList2[identity])
@@ -690,12 +681,10 @@ window.onload = function() {
     }
     // console.log(localStorage)
 
-
     function allclick() {
         click1()
         click2()
     }
-
 
     canvas.onclick = function() { allclick() }
 
@@ -777,7 +766,7 @@ window.onload = function() {
 
         if (complete === evenorodd) {
             pass.style.fontWeight = 'bold'
-            pass.style.opacity = 1;
+            pass.style.opacity = 1
             pass.style.fontSize = '1em'
 
             pass.onclick = function() {
@@ -802,7 +791,7 @@ window.onload = function() {
             window.location.assign(window.location.href)
         }
 
-        root.style.setProperty("--overalls", overalls);
+        root.style.setProperty("--overalls", overalls)
         overall.style.marginTop = `${window.innerHeight - (window.innerHeight/10)}px`
         overall.style.width = `${window.innerWidth}px`
 
@@ -813,7 +802,6 @@ window.onload = function() {
         // console.log(localStorage)
     }
 }
-
 
 // const add = (function() {
 //         let counter = 0;

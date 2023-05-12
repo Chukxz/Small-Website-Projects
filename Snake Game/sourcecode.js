@@ -25,8 +25,6 @@ let score = 0;
 
 const gulpSound = new Audio("mygulpsound.mp3");
 
-
-
 class SnakeParts {
     constructor(xposition, yposition) {
         this.x = xposition;
@@ -142,8 +140,6 @@ function drawSnake() {
 
     ctx.fillStyle = "orange";
     ctx.fillRect(headX * tileCount, headY * tileCount, tileSize, tileSize);
-
-
 }
 
 function changeSnakePosition() {
@@ -186,9 +182,9 @@ function checkAppleCollision() {
     }
 }
 
-
-
 document.body.addEventListener("keydown", keyDown);
+
+// document.body.addEventListener("touchstart", touchStart);
 
 function keyDown(event) {
     //up
@@ -224,6 +220,39 @@ function keyDown(event) {
     }
 }
 
+// function touchStart(event) {
+//     //up
+//     if (event.keyCode == 38) {
+//         if (yvelocity == 1)
+//             return;
+//         yvelocity = -1;
+//         xvelocity = 0;
+//     }
+
+//     //down
+//     if (event.keyCode == 40) {
+//         if (yvelocity == -1)
+//             return;
+//         yvelocity = 1;
+//         xvelocity = 0;
+//     }
+
+//     //left
+//     if (event.keyCode == 37) {
+//         if (xvelocity == 1)
+//             return;
+//         yvelocity = 0;
+//         xvelocity = -1;
+//     }
+
+//     //right
+//     if (event.keyCode == 39) {
+//         if (xvelocity == -1)
+//             return;
+//         yvelocity = 0;
+//         xvelocity = 1;
+//     }
+// }
 
 drawGame();
 
